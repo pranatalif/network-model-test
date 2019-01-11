@@ -3,7 +3,67 @@ grammar fr.inria.diverse.NetworkModelTest with org.eclipse.xtext.common.Terminal
 generate networkModelTest "http://www.inria.fr/diverse/NetworkModelTest"
 
 Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+	(elements+=NodeElement)*
+;
+
+NodeElement:
+	PackageDeclaration | Import | Type
+;
+
+PackageDeclaration:
+	'package' name=QualifiedName '{'
+		(elements+=NodeElement)*
+	'}'
+;
+
+QualifiedName:
+	ID ('.' ID)*
+;
+
+Import:
+	'import' importedNameSpace=QualifiedNameWithWildcard
+;
+
+QualifiedNameWithWildcard:
+	QualifiedName '.*'?
+;
+
+Type:
+	DataType | Config
+;
+
+DataType:
+	'datatype' name=ID
+;
+
+Config:
+	'config' name=ID ('extends' superType=[Config|QualifiedName])? '{'
+		(node+=Node)+
+		(binding+=Binding)+
+	'}'
+;
+
+Node:
+	nodetype+=NodeType node=ID '{'
+		('image:' image=STRING)?
+		'name:' nodeName+=STRING
+		'nodeID:' nodeID+=STRING
+		('eth0.IP:' nodeIP+=STRING)?
+	'}'
+;
+
+NodeType:
+	nodetype=('Docker' | 'OVS' | 'EthSwitch' | 'Firefox' | 'UbuntuDesktop' | 'NAT' | 'Cloud')
+;
+
+Binding:
+	'bind' nodeA+=nodeA 'with' nodeB+=nodeB
+;
+
+nodeA:
+	node=ID'.'eth=ID
+;
+
+nodeB:
+	node=ID'.'eth=ID
+;
