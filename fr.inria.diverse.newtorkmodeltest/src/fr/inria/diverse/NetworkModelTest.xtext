@@ -1,0 +1,9 @@
+grammar fr.inria.diverse.NetworkModelTest with org.eclipse.xtext.common.Terminals
+
+generate networkModelTest "http://www.inria.fr/diverse/NetworkModelTest"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
