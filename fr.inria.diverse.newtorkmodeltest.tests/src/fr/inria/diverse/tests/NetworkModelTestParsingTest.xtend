@@ -11,6 +11,7 @@ import org.eclipse.xtext.testing.util.ParseHelper
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.^extension.ExtendWith
+import org.eclipse.xtext.util.EmfFormatter
 
 @ExtendWith(InjectionExtension)
 @InjectWith(NetworkModelTestInjectorProvider)
@@ -21,10 +22,170 @@ class NetworkModelTestParsingTest {
 	@Test
 	def void loadModel() {
 		val result = parseHelper.parse('''
-			Hello Xtext!
+				config ConfigLvl1{
+					OVS nodeOVS1{
+						name: "Openvswitchmanagement-3"
+						nodeID: "7508c161-e3c3-4e6d-8004-0ae0f2b7c7f6"
+						eth0.IP: "192.168.1.11"
+					}
+					Docker nodeDockerUbuntu1{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-5 (ODL Controller)"
+						nodeID: "56fb43ab-3e2e-463e-9dd1-cbf109d3e9c3"
+						eth0.IP: "192.168.1.12"
+					}
+					Firefox nodeFirefox1{
+						name: "Firefox31.1.1~2.1"
+						nodeID: "0450804c-738c-4e88-9dff-cb5f9eb5505f"
+						eth0.IP: "192.168.1.13"
+					}
+					Docker nodeDockerUbuntu2{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-1 (OFM Manager)"
+						nodeID: "c2aaf06a-7afe-4779-a6ee-8b9c60602a4d"
+						eth0.IP: "192.168.1.15"
+					}
+					EthSwitch nodeEthSwitch1{
+						name: "EthernetSwitch-1"
+						nodeID: "b6672b1b-3c0b-4362-b6cc-976aa133510d"
+						eth0.IP: "192.168.1.16"
+					}
+					Docker nodeDockerUbuntu3{
+						image: "UbuntuGuest"
+						name: "UbuntuDockerGuest-2"
+						nodeID: "3cc6d285-fa1d-430e-a36d-bd4bb908e1d6"
+						eth0.IP: "192.168.1.17"
+					}
+					OVS nodeOVS2{
+						name: "Openvswitchmanagement-1"
+						nodeID: "aba2dc9a-c430-4fbc-8a81-470d6e19d852"
+						eth0.IP: "192.168.1.18"
+					}
+					OVS nodeOVS3{
+						name: "Openvswitchmanagement-2"
+						nodeID: "64090bd4-155f-4272-8f0a-468e9cc349ee"
+						eth0.IP: "192.168.1.19"
+					}
+					OVS nodeOVS4{
+						name: "Openvswitchmanagement-4"
+						nodeID: "38786aef-c1e6-4ca8-886f-079c6ec5fc89"
+						eth0.IP: "192.168.1.20"
+					}
+					OVS nodeOVS5{
+						name: "Openvswitchmanagement-5"
+						nodeID: "fd3525d9-e92a-487d-a915-0adfe2c8a481"
+						eth0.IP: "192.168.1.21"
+					}
+					Docker nodeDockerUbuntu2{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-3"
+						nodeID: "9c08391b-8295-4dfb-b290-d20b978e9931"
+						eth0.IP: "192.168.1.22"
+					}
+					Docker nodeDockerUbuntu3{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-8"
+						nodeID: "335efc50-2f70-41a4-bfdd-3b02602e2c1b"
+						eth0.IP: "192.168.1.23"
+					}
+					Docker nodeDockerUbuntu4{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-9"
+						nodeID: "3b565de2-571a-4099-ab15-b9440ac5f2a0"
+						eth0.IP: "192.168.1.24"
+					}
+					Docker nodeDockerUbuntu5{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-7"
+						nodeID: "7926dc3c-cc6f-464a-9541-32b4bfd329d0"
+						eth0.IP: "192.168.1.25"
+					}
+					Docker nodeDockerUbuntu6{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-6"
+						nodeID: "6628856d-6570-4bfb-96a5-8207ba0636be"
+						eth0.IP: "192.168.1.26"
+					}
+					Docker nodeDockerUbuntu7{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-10"
+						nodeID: "50c207d0-090b-4892-9a83-2b5caf697742"
+						eth0.IP: "192.168.1.27"
+					}
+					Docker nodeDockerUbuntu8{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-11"
+						nodeID: "83946d48-8e4b-4ac4-a4ac-adfc494f8783"
+						eth0.IP: "192.168.1.28"
+					}
+					Docker nodeDockerUbuntu9{
+						image: "UbuntuGuest"
+						name: "DockerUbuntuGuest-4"
+						nodeID: "063d29b5-c1da-473b-a61a-6a18f55e458b"
+						eth0.IP: "192.168.1.29"
+					}
+					UbuntuDesktop nodeVideoServer{
+						name: "UbuntuDesktopGuest16.04.5-2"
+						nodeID: "cc874ac9-16b0-456a-acc4-32ff12125dc8"
+						eth0.IP: "192.168.1.30"
+					}
+					UbuntuDesktop nodeVideoClient{
+						name: "UbuntuDesktopGuest16.04.5-1"
+						nodeID: "34b4c0d8-c6af-4624-b3e7-71db86ada775"
+						eth0.IP: "192.168.1.31"
+					}
+					NAT nodeNAT1{
+						name: "NAT-1"
+						nodeID: "c4c28b31-3cc0-4703-8716-f0a2b2adeb38"
+					}
+					NAT nodeNAT2{
+						name: "NAT-2"
+						nodeID: "7255276c-8ff4-48c3-8268-6998b37a330a"
+					}
+					NAT nodeNAT3{
+						name: "NAT-3"
+						nodeID: "e464c182-039f-4b9b-9bbf-3786c2f2f92d"
+					}
+					bind nodeOVS1.eth5 with nodeDockerUbuntu1.eth0
+					bind nodeOVS1.eth2 with nodeFirefox1.e0
+					bind nodeOVS1.eth3 with nodeEthSwitch1.e0
+					bind nodeOVS1.eth4 with nodeDockerUbuntu2.eth0
+					bind nodeEthSwitch.e2 with nodeNAT.nat0
+					bind nodeEthSwitch.e6 with nodeOVS5.eth1
+					bind nodeEthSwitch.e5 with nodeOVS4.eth1
+					bind nodeEthSwitch.e4 with nodeOVS3.eth1
+					bind nodeEthSwitch.e3 with nodeOVS2.eth1
+					bind nodeEthSwitch.e1 with nodeDockerUbuntu3.eth0
+					bind nodeOVS2.eth7 with nodeOVS5.eth2
+					bind nodeOVS2.eth5 with nodeOVS4.eth6
+					bind nodeOVS2.eth6 with nodeOVS3.eth4
+					bind nodeOVS2.eth4 with nodeDockerUbuntu3.eth0
+					bind nodeOVS2.eth3 with nodeDockerUbuntu2.eth0
+					bind nodeOVS2.eth2 with nodeVideoServer.eth0
+					bind nodeOVS3.eth7 with nodeNAT2.nat0
+					bind nodeOVS3.eth6 with nodeOVS5.eth6
+					bind nodeOVS3.eth5 with nodeOVS4.eth4
+					bind nodeOVS3.eth3 with nodeDockerUbuntu5.eth0
+					bind nodeOVS3.eth2 with nodeDockerUbuntu4.eth0
+					bind nodeOVS4.eth7 with nodeNAT3.nat0
+					bind nodeOVS4.eth5 with nodeOVS5.eth5
+					bind nodeOVS4.eth3 with nodeDockerUbuntu.eth7
+					bind nodeOVS4.eth2 with nodeDockerUbuntu.eth6
+					bind nodeOVS5.eth4 with nodeDockerUbuntu9.eth0
+					bind nodeOVS5.eth3 with nodeVideoClient.eth0
+					bind nodeOVS5.eth2 with nodeDockerUbuntu8.eth0
+				}
 		''')
-		Assertions.assertNotNull(result)
-		val errors = result.eResource.errors
-		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
+		println(EmfFormatter.objToStr(result))
+		
+		//validator.assertNoErrors(result)
+		//val fsa = new InMemoryFileSystemAccess
+		//generator.doGenerate(result.eResource, fsa)
+		//fsa.allFiles.values.head.toString.contain('''''')
+		
+		//Assertions.assertNotNull(result)
+		//val errors = result.eResource.errors
+		//Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
+
 	}
 }
