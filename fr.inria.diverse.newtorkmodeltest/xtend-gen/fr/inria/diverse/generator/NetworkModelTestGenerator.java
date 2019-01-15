@@ -3,10 +3,14 @@
  */
 package fr.inria.diverse.generator;
 
+import com.google.common.base.Objects;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 /**
  * Generates code from your model files on save.
@@ -17,5 +21,15 @@ import org.eclipse.xtext.generator.IGeneratorContext;
 public class NetworkModelTestGenerator extends AbstractGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess2 fsa, final IGeneratorContext context) {
+    final String simpleClassName = resource.getURI().trimFileExtension().lastSegment();
+    EList<EObject> _contents = resource.getContents();
+    EObject _head = null;
+    if (_contents!=null) {
+      _head=IterableExtensions.<EObject>head(_contents);
+    }
+    boolean _equals = Objects.equal(_head, null);
+    if (_equals) {
+      return;
+    }
   }
 }

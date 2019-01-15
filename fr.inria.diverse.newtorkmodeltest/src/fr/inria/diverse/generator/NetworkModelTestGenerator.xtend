@@ -7,6 +7,9 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import java.util.Scanner
+import fr.inria.diverse.networkModelTest.NodeElement
+import fr.inria.diverse.networkModelTest.Node
 
 /**
  * Generates code from your model files on save.
@@ -16,10 +19,70 @@ import org.eclipse.xtext.generator.IGeneratorContext
 class NetworkModelTestGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
+		val simpleClassName = resource.getURI.trimFileExtension.lastSegment
+		if (resource.contents?.head == null) {
+			return;
+		}
+//		val declarations = resource.contents.head.eContents.filter(NodeElement)
+//		fsa.generateFile(simpleClassName + '.java', '''
+//			public class «simpleClassName» {
+//				public static void fire(String event) {
+//					«FOR node : declarations.filter(Node)»
+//						«FOR property : node.properties»
+//							if (event.equals("«state.name»")) {
+//								System.out.println("«device.name» is now «state.name»!");
+//							}
+//						«ENDFOR»
+//					«ENDFOR»
+//					«FOR rule : declarations.filter(Rule)»
+//						if (event.equals("«rule.when.name»")) {
+//							fire("«rule.then.name»");
+//						}
+//					«ENDFOR»
+//				}
+//				
+//				public static void main(String... args) {
+//					try («Scanner.name» scanner = new «Scanner.name»(System.in)) {
+//						System.out.println("Welcome home!");
+//						System.out.println("Available commands : ");
+//						«FOR device : declarations.filter(Device)»
+//							«FOR state : device.states»
+//								System.out.println("  «device.name» «state.name»" );
+//							«ENDFOR»
+//						«ENDFOR»
+//						System.out.println("Have fun!");
+//						while(true) {
+//							String command = scanner.next();
+//							«FOR device : declarations.filter(Device)»
+//								if (command.equalsIgnoreCase("«device.name»")) {
+//									String secondaryCommand = scanner.next();
+//									«FOR state : device.states»
+//										if (secondaryCommand.equalsIgnoreCase("«state.name»")) {
+//											fire("«state.name»");
+//										} else 
+//									«ENDFOR»
+//									{
+//										System.out.println("«device.name» can only have the following states: «device.states.map[name].
+//							join(',')».");
+//									}
+//								}
+//							«ENDFOR»
+//							if (command.equalsIgnoreCase("bye")) {
+//								System.out.println("Ciao!");
+//								break;
+//							}
+//						}
+//					}
+//				}
+//			}
+//		''')
+//	}
+////		fsa.generateFile('greetings.txt', 'People to greet: ' + 
+////			resource.allContents
+////				.filter(Greeting)
+////				.map[name]
+////				.join(', '))
+//	def ruleMethodName(Rule device) {
+//		'execute' + device.description.replaceAll('\\W', '_')
 	}
 }
