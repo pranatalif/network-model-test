@@ -8,7 +8,8 @@ import org.eclipse.xtend.lib.macro.expression.Expression
 
 class NetworkModelTestInterpreter{
 	//extension NodeElement extensions = new NetworkElementExtensions
-	def dispatch Object interpret(Expression e){
-		
+	
+	def static void main(String[] args){
+		println("hahah");
 	}
 }

@@ -44,11 +44,11 @@ Config:
 ;
 
 Node:
-	nodetype+=NodeType node=ID '{'
+	nodetype=NodeType node=ID '{'
 		('image:' image=STRING)?
-		'name:' nodeName+=STRING
-		'nodeID:' nodeID+=STRING
-		('eth0.IP:' nodeIP+=STRING)?
+		'name:' nodeName=STRING
+		'nodeID:' nodeID=STRING
+		('eth0.IP:' nodeIP=STRING)?
 	'}'
 ;
 

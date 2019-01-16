@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.^extension.ExtendWith
 import org.eclipse.xtext.util.EmfFormatter
+import fr.inria.diverse.NetworkModelTestStandaloneSetup
 
 @ExtendWith(InjectionExtension)
 @InjectWith(NetworkModelTestInjectorProvider)
@@ -176,6 +177,7 @@ class NetworkModelTestParsingTest {
 					bind nodeOVS5.eth2 with nodeDockerUbuntu8.eth0
 				}
 		''')
+		//var model = NetworkModelTestStandaloneSetup().
 		println(EmfFormatter.objToStr(result))
 		
 		//validator.assertNoErrors(result)

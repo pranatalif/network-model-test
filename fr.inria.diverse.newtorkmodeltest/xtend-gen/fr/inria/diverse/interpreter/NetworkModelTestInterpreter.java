@@ -1,14 +1,10 @@
 package fr.inria.diverse.interpreter;
 
-import org.eclipse.xtend.lib.macro.expression.Expression;
+import org.eclipse.xtext.xbase.lib.InputOutput;
 
 @SuppressWarnings("all")
 public class NetworkModelTestInterpreter {
-  protected Object _interpret(final Expression e) {
-    return null;
-  }
-  
-  public Object interpret(final Expression e) {
-    return _interpret(e);
+  public static void main(final String[] args) {
+    InputOutput.<String>println("hahah");
   }
 }
