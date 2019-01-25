@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: fr.inria.diverse.networkmodeltest.interpreter; singleton:=true
+Export-Package: org.inria.diverse.interpreter
+Bundle-Name: fr.inria.diverse.networkmodeltest.interpreter
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Require-Bundle: fr.inria.diverse.k3.al.annotationprocessor.plugin;bundle-version="3.0.0";visibility:=reexport,
+ com.google.guava;bundle-version="0.0.0";visibility:=private,
+ fr.inria.diverse.newtorkmodeltest;bundle-version="1.0.0",
+ fr.inria.diverse.newtorkmodeltest.ide;bundle-version="1.0.0",
+ fr.inria.diverse.newtorkmodeltest.ui;bundle-version="1.0.0",
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.eclipse.xtend.lib;bundle-version="2.14.0",
+ org.antlr.runtime;bundle-version="[3.2.0,
+ 3.2.1)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
