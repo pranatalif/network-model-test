@@ -291,7 +291,7 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE = 7;
 
   /**
-   * The feature id for the '<em><b>Nodetype</b></em>' containment reference list.
+   * The feature id for the '<em><b>Nodetype</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -318,7 +318,7 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE__IMAGE = 2;
 
   /**
-   * The feature id for the '<em><b>Node Name</b></em>' attribute list.
+   * The feature id for the '<em><b>Node Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -327,7 +327,7 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE__NODE_NAME = 3;
 
   /**
-   * The feature id for the '<em><b>Node ID</b></em>' attribute list.
+   * The feature id for the '<em><b>Node ID</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -336,7 +336,7 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE__NODE_ID = 4;
 
   /**
-   * The feature id for the '<em><b>Node IP</b></em>' attribute list.
+   * The feature id for the '<em><b>Node IP</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -662,10 +662,10 @@ public interface NetworkModelTestPackage extends EPackage
   EClass getNode();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.inria.diverse.networkModelTest.Node#getNodetype <em>Nodetype</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.inria.diverse.networkModelTest.Node#getNodetype <em>Nodetype</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Nodetype</em>'.
+   * @return the meta object for the containment reference '<em>Nodetype</em>'.
    * @see fr.inria.diverse.networkModelTest.Node#getNodetype()
    * @see #getNode()
    * @generated
@@ -695,10 +695,10 @@ public interface NetworkModelTestPackage extends EPackage
   EAttribute getNode_Image();
 
   /**
-   * Returns the meta object for the attribute list '{@link fr.inria.diverse.networkModelTest.Node#getNodeName <em>Node Name</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.Node#getNodeName <em>Node Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Node Name</em>'.
+   * @return the meta object for the attribute '<em>Node Name</em>'.
    * @see fr.inria.diverse.networkModelTest.Node#getNodeName()
    * @see #getNode()
    * @generated
@@ -706,10 +706,10 @@ public interface NetworkModelTestPackage extends EPackage
   EAttribute getNode_NodeName();
 
   /**
-   * Returns the meta object for the attribute list '{@link fr.inria.diverse.networkModelTest.Node#getNodeID <em>Node ID</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.Node#getNodeID <em>Node ID</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Node ID</em>'.
+   * @return the meta object for the attribute '<em>Node ID</em>'.
    * @see fr.inria.diverse.networkModelTest.Node#getNodeID()
    * @see #getNode()
    * @generated
@@ -717,10 +717,10 @@ public interface NetworkModelTestPackage extends EPackage
   EAttribute getNode_NodeID();
 
   /**
-   * Returns the meta object for the attribute list '{@link fr.inria.diverse.networkModelTest.Node#getNodeIP <em>Node IP</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.Node#getNodeIP <em>Node IP</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Node IP</em>'.
+   * @return the meta object for the attribute '<em>Node IP</em>'.
    * @see fr.inria.diverse.networkModelTest.Node#getNodeIP()
    * @see #getNode()
    * @generated
@@ -1012,7 +1012,7 @@ public interface NetworkModelTestPackage extends EPackage
     EClass NODE = eINSTANCE.getNode();
 
     /**
-     * The meta object literal for the '<em><b>Nodetype</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Nodetype</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1036,7 +1036,7 @@ public interface NetworkModelTestPackage extends EPackage
     EAttribute NODE__IMAGE = eINSTANCE.getNode_Image();
 
     /**
-     * The meta object literal for the '<em><b>Node Name</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Node Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1044,7 +1044,7 @@ public interface NetworkModelTestPackage extends EPackage
     EAttribute NODE__NODE_NAME = eINSTANCE.getNode_NodeName();
 
     /**
-     * The meta object literal for the '<em><b>Node ID</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Node ID</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1052,7 +1052,7 @@ public interface NetworkModelTestPackage extends EPackage
     EAttribute NODE__NODE_ID = eINSTANCE.getNode_NodeID();
 
     /**
-     * The meta object literal for the '<em><b>Node IP</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Node IP</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

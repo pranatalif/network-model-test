@@ -540,7 +540,7 @@ ruleNode returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getNodeRule());
 					}
-					add(
+					set(
 						$current,
 						"nodetype",
 						lv_nodetype_0_0,
@@ -609,7 +609,7 @@ ruleNode returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getNodeRule());
 					}
-					addWithLastConsumed(
+					setWithLastConsumed(
 						$current,
 						"nodeName",
 						lv_nodeName_6_0,
@@ -631,7 +631,7 @@ ruleNode returns [EObject current=null]
 					if ($current==null) {
 						$current = createModelElement(grammarAccess.getNodeRule());
 					}
-					addWithLastConsumed(
+					setWithLastConsumed(
 						$current,
 						"nodeID",
 						lv_nodeID_8_0,
@@ -654,7 +654,7 @@ ruleNode returns [EObject current=null]
 						if ($current==null) {
 							$current = createModelElement(grammarAccess.getNodeRule());
 						}
-						addWithLastConsumed(
+						setWithLastConsumed(
 							$current,
 							"nodeIP",
 							lv_nodeIP_10_0,

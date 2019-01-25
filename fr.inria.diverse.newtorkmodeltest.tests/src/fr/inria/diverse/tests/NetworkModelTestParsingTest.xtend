@@ -151,12 +151,12 @@ class NetworkModelTestParsingTest {
 					bind nodeOVS1.eth2 with nodeFirefox1.e0
 					bind nodeOVS1.eth3 with nodeEthSwitch1.e0
 					bind nodeOVS1.eth4 with nodeDockerUbuntu2.eth0
-					bind nodeEthSwitch.e2 with nodeNAT.nat0
-					bind nodeEthSwitch.e6 with nodeOVS5.eth1
-					bind nodeEthSwitch.e5 with nodeOVS4.eth1
-					bind nodeEthSwitch.e4 with nodeOVS3.eth1
-					bind nodeEthSwitch.e3 with nodeOVS2.eth1
-					bind nodeEthSwitch.e1 with nodeDockerUbuntu3.eth0
+					bind nodeEthSwitch1.e2 with nodeNAT.nat0
+					bind nodeEthSwitch1.e6 with nodeOVS5.eth1
+					bind nodeEthSwitch1.e5 with nodeOVS4.eth1
+					bind nodeEthSwitch1.e4 with nodeOVS3.eth1
+					bind nodeEthSwitch1.e3 with nodeOVS2.eth1
+					bind nodeEthSwitch1.e1 with nodeDockerUbuntu3.eth0
 					bind nodeOVS2.eth7 with nodeOVS5.eth2
 					bind nodeOVS2.eth5 with nodeOVS4.eth6
 					bind nodeOVS2.eth6 with nodeOVS3.eth4

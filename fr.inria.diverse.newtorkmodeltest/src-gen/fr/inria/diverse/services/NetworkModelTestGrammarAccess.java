@@ -308,17 +308,17 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Node:
-		//	nodetype+=NodeType node=ID '{' ('image:' image=STRING)?
-		//	'name:' nodeName+=STRING
-		//	'nodeID:' nodeID+=STRING ('eth0.IP:' nodeIP+=STRING)?
+		//	nodetype=NodeType node=ID '{' ('image:' image=STRING)?
+		//	'name:' nodeName=STRING
+		//	'nodeID:' nodeID=STRING ('eth0.IP:' nodeIP=STRING)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//nodetype+=NodeType node=ID '{' ('image:' image=STRING)? 'name:' nodeName+=STRING 'nodeID:' nodeID+=STRING ('eth0.IP:'
-		//nodeIP+=STRING)? '}'
+		//nodetype=NodeType node=ID '{' ('image:' image=STRING)? 'name:' nodeName=STRING 'nodeID:' nodeID=STRING ('eth0.IP:'
+		//nodeIP=STRING)? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//nodetype+=NodeType
+		//nodetype=NodeType
 		public Assignment getNodetypeAssignment_0() { return cNodetypeAssignment_0; }
 		
 		//NodeType
@@ -348,7 +348,7 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		//'name:'
 		public Keyword getNameKeyword_4() { return cNameKeyword_4; }
 		
-		//nodeName+=STRING
+		//nodeName=STRING
 		public Assignment getNodeNameAssignment_5() { return cNodeNameAssignment_5; }
 		
 		//STRING
@@ -357,19 +357,19 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		//'nodeID:'
 		public Keyword getNodeIDKeyword_6() { return cNodeIDKeyword_6; }
 		
-		//nodeID+=STRING
+		//nodeID=STRING
 		public Assignment getNodeIDAssignment_7() { return cNodeIDAssignment_7; }
 		
 		//STRING
 		public RuleCall getNodeIDSTRINGTerminalRuleCall_7_0() { return cNodeIDSTRINGTerminalRuleCall_7_0; }
 		
-		//('eth0.IP:' nodeIP+=STRING)?
+		//('eth0.IP:' nodeIP=STRING)?
 		public Group getGroup_8() { return cGroup_8; }
 		
 		//'eth0.IP:'
 		public Keyword getEth0IPKeyword_8_0() { return cEth0IPKeyword_8_0; }
 		
-		//nodeIP+=STRING
+		//nodeIP=STRING
 		public Assignment getNodeIPAssignment_8_1() { return cNodeIPAssignment_8_1; }
 		
 		//STRING
@@ -683,9 +683,9 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 	}
 	
 	//Node:
-	//	nodetype+=NodeType node=ID '{' ('image:' image=STRING)?
-	//	'name:' nodeName+=STRING
-	//	'nodeID:' nodeID+=STRING ('eth0.IP:' nodeIP+=STRING)?
+	//	nodetype=NodeType node=ID '{' ('image:' image=STRING)?
+	//	'name:' nodeName=STRING
+	//	'nodeID:' nodeID=STRING ('eth0.IP:' nodeIP=STRING)?
 	//	'}';
 	public NodeElements getNodeAccess() {
 		return pNode;

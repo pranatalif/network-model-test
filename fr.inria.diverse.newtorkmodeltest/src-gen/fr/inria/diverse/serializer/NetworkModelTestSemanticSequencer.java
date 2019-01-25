@@ -179,12 +179,12 @@ public class NetworkModelTestSemanticSequencer extends AbstractDelegatingSemanti
 	 *
 	 * Constraint:
 	 *     (
-	 *         nodetype+=NodeType 
+	 *         nodetype=NodeType 
 	 *         node=ID 
 	 *         image=STRING? 
-	 *         nodeName+=STRING 
-	 *         nodeID+=STRING 
-	 *         nodeIP+=STRING?
+	 *         nodeName=STRING 
+	 *         nodeID=STRING 
+	 *         nodeIP=STRING?
 	 *     )
 	 */
 	protected void sequence_Node(ISerializationContext context, Node semanticObject) {

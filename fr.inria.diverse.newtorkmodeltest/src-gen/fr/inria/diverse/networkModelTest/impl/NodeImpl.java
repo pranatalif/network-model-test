@@ -7,22 +7,14 @@ import fr.inria.diverse.networkModelTest.NetworkModelTestPackage;
 import fr.inria.diverse.networkModelTest.Node;
 import fr.inria.diverse.networkModelTest.NodeType;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,14 +37,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class NodeImpl extends MinimalEObjectImpl.Container implements Node
 {
   /**
-   * The cached value of the '{@link #getNodetype() <em>Nodetype</em>}' containment reference list.
+   * The cached value of the '{@link #getNodetype() <em>Nodetype</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNodetype()
    * @generated
    * @ordered
    */
-  protected EList<NodeType> nodetype;
+  protected NodeType nodetype;
 
   /**
    * The default value of the '{@link #getNode() <em>Node</em>}' attribute.
@@ -95,34 +87,64 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   protected String image = IMAGE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getNodeName() <em>Node Name</em>}' attribute list.
+   * The default value of the '{@link #getNodeName() <em>Node Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNodeName()
    * @generated
    * @ordered
    */
-  protected EList<String> nodeName;
+  protected static final String NODE_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNodeID() <em>Node ID</em>}' attribute list.
+   * The cached value of the '{@link #getNodeName() <em>Node Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNodeName()
+   * @generated
+   * @ordered
+   */
+  protected String nodeName = NODE_NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getNodeID() <em>Node ID</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNodeID()
    * @generated
    * @ordered
    */
-  protected EList<String> nodeID;
+  protected static final String NODE_ID_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNodeIP() <em>Node IP</em>}' attribute list.
+   * The cached value of the '{@link #getNodeID() <em>Node ID</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNodeID()
+   * @generated
+   * @ordered
+   */
+  protected String nodeID = NODE_ID_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getNodeIP() <em>Node IP</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNodeIP()
    * @generated
    * @ordered
    */
-  protected EList<String> nodeIP;
+  protected static final String NODE_IP_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getNodeIP() <em>Node IP</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNodeIP()
+   * @generated
+   * @ordered
+   */
+  protected String nodeIP = NODE_IP_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -151,13 +173,48 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @generated
    */
   @Override
-  public EList<NodeType> getNodetype()
+  public NodeType getNodetype()
   {
-    if (nodetype == null)
-    {
-      nodetype = new EObjectContainmentEList<NodeType>(NodeType.class, this, NetworkModelTestPackage.NODE__NODETYPE);
-    }
     return nodetype;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetNodetype(NodeType newNodetype, NotificationChain msgs)
+  {
+    NodeType oldNodetype = nodetype;
+    nodetype = newNodetype;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.NODE__NODETYPE, oldNodetype, newNodetype);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setNodetype(NodeType newNodetype)
+  {
+    if (newNodetype != nodetype)
+    {
+      NotificationChain msgs = null;
+      if (nodetype != null)
+        msgs = ((InternalEObject)nodetype).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - NetworkModelTestPackage.NODE__NODETYPE, null, msgs);
+      if (newNodetype != null)
+        msgs = ((InternalEObject)newNodetype).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - NetworkModelTestPackage.NODE__NODETYPE, null, msgs);
+      msgs = basicSetNodetype(newNodetype, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.NODE__NODETYPE, newNodetype, newNodetype));
   }
 
   /**
@@ -216,12 +273,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @generated
    */
   @Override
-  public EList<String> getNodeName()
+  public String getNodeName()
   {
-    if (nodeName == null)
-    {
-      nodeName = new EDataTypeEList<String>(String.class, this, NetworkModelTestPackage.NODE__NODE_NAME);
-    }
     return nodeName;
   }
 
@@ -231,12 +284,22 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @generated
    */
   @Override
-  public EList<String> getNodeID()
+  public void setNodeName(String newNodeName)
   {
-    if (nodeID == null)
-    {
-      nodeID = new EDataTypeEList<String>(String.class, this, NetworkModelTestPackage.NODE__NODE_ID);
-    }
+    String oldNodeName = nodeName;
+    nodeName = newNodeName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.NODE__NODE_NAME, oldNodeName, nodeName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getNodeID()
+  {
     return nodeID;
   }
 
@@ -246,13 +309,37 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @generated
    */
   @Override
-  public EList<String> getNodeIP()
+  public void setNodeID(String newNodeID)
   {
-    if (nodeIP == null)
-    {
-      nodeIP = new EDataTypeEList<String>(String.class, this, NetworkModelTestPackage.NODE__NODE_IP);
-    }
+    String oldNodeID = nodeID;
+    nodeID = newNodeID;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.NODE__NODE_ID, oldNodeID, nodeID));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getNodeIP()
+  {
     return nodeIP;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setNodeIP(String newNodeIP)
+  {
+    String oldNodeIP = nodeIP;
+    nodeIP = newNodeIP;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.NODE__NODE_IP, oldNodeIP, nodeIP));
   }
 
   /**
@@ -266,7 +353,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     switch (featureID)
     {
       case NetworkModelTestPackage.NODE__NODETYPE:
-        return ((InternalEList<?>)getNodetype()).basicRemove(otherEnd, msgs);
+        return basicSetNodetype(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -302,15 +389,13 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case NetworkModelTestPackage.NODE__NODETYPE:
-        getNodetype().clear();
-        getNodetype().addAll((Collection<? extends NodeType>)newValue);
+        setNodetype((NodeType)newValue);
         return;
       case NetworkModelTestPackage.NODE__NODE:
         setNode((String)newValue);
@@ -319,16 +404,13 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
         setImage((String)newValue);
         return;
       case NetworkModelTestPackage.NODE__NODE_NAME:
-        getNodeName().clear();
-        getNodeName().addAll((Collection<? extends String>)newValue);
+        setNodeName((String)newValue);
         return;
       case NetworkModelTestPackage.NODE__NODE_ID:
-        getNodeID().clear();
-        getNodeID().addAll((Collection<? extends String>)newValue);
+        setNodeID((String)newValue);
         return;
       case NetworkModelTestPackage.NODE__NODE_IP:
-        getNodeIP().clear();
-        getNodeIP().addAll((Collection<? extends String>)newValue);
+        setNodeIP((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -345,7 +427,7 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     switch (featureID)
     {
       case NetworkModelTestPackage.NODE__NODETYPE:
-        getNodetype().clear();
+        setNodetype((NodeType)null);
         return;
       case NetworkModelTestPackage.NODE__NODE:
         setNode(NODE_EDEFAULT);
@@ -354,13 +436,13 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
         setImage(IMAGE_EDEFAULT);
         return;
       case NetworkModelTestPackage.NODE__NODE_NAME:
-        getNodeName().clear();
+        setNodeName(NODE_NAME_EDEFAULT);
         return;
       case NetworkModelTestPackage.NODE__NODE_ID:
-        getNodeID().clear();
+        setNodeID(NODE_ID_EDEFAULT);
         return;
       case NetworkModelTestPackage.NODE__NODE_IP:
-        getNodeIP().clear();
+        setNodeIP(NODE_IP_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -377,17 +459,17 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     switch (featureID)
     {
       case NetworkModelTestPackage.NODE__NODETYPE:
-        return nodetype != null && !nodetype.isEmpty();
+        return nodetype != null;
       case NetworkModelTestPackage.NODE__NODE:
         return NODE_EDEFAULT == null ? node != null : !NODE_EDEFAULT.equals(node);
       case NetworkModelTestPackage.NODE__IMAGE:
         return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
       case NetworkModelTestPackage.NODE__NODE_NAME:
-        return nodeName != null && !nodeName.isEmpty();
+        return NODE_NAME_EDEFAULT == null ? nodeName != null : !NODE_NAME_EDEFAULT.equals(nodeName);
       case NetworkModelTestPackage.NODE__NODE_ID:
-        return nodeID != null && !nodeID.isEmpty();
+        return NODE_ID_EDEFAULT == null ? nodeID != null : !NODE_ID_EDEFAULT.equals(nodeID);
       case NetworkModelTestPackage.NODE__NODE_IP:
-        return nodeIP != null && !nodeIP.isEmpty();
+        return NODE_IP_EDEFAULT == null ? nodeIP != null : !NODE_IP_EDEFAULT.equals(nodeIP);
     }
     return super.eIsSet(featureID);
   }

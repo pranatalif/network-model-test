@@ -3,8 +3,6 @@
  */
 package fr.inria.diverse.networkModelTest;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -31,20 +29,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Node extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Nodetype</b></em>' containment reference list.
-   * The list contents are of type {@link fr.inria.diverse.networkModelTest.NodeType}.
+   * Returns the value of the '<em><b>Nodetype</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nodetype</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Nodetype</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nodetype</em>' containment reference list.
+   * @return the value of the '<em>Nodetype</em>' containment reference.
+   * @see #setNodetype(NodeType)
    * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getNode_Nodetype()
    * @model containment="true"
    * @generated
    */
-  EList<NodeType> getNodetype();
+  NodeType getNodetype();
+
+  /**
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Node#getNodetype <em>Nodetype</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Nodetype</em>' containment reference.
+   * @see #getNodetype()
+   * @generated
+   */
+  void setNodetype(NodeType value);
 
   /**
    * Returns the value of the '<em><b>Node</b></em>' attribute.
@@ -99,51 +107,81 @@ public interface Node extends EObject
   void setImage(String value);
 
   /**
-   * Returns the value of the '<em><b>Node Name</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Node Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Node Name</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Node Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Node Name</em>' attribute list.
+   * @return the value of the '<em>Node Name</em>' attribute.
+   * @see #setNodeName(String)
    * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getNode_NodeName()
-   * @model unique="false"
+   * @model
    * @generated
    */
-  EList<String> getNodeName();
+  String getNodeName();
 
   /**
-   * Returns the value of the '<em><b>Node ID</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Node#getNodeName <em>Node Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Node Name</em>' attribute.
+   * @see #getNodeName()
+   * @generated
+   */
+  void setNodeName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Node ID</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Node ID</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Node ID</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Node ID</em>' attribute list.
+   * @return the value of the '<em>Node ID</em>' attribute.
+   * @see #setNodeID(String)
    * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getNode_NodeID()
-   * @model unique="false"
+   * @model
    * @generated
    */
-  EList<String> getNodeID();
+  String getNodeID();
 
   /**
-   * Returns the value of the '<em><b>Node IP</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Node#getNodeID <em>Node ID</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Node ID</em>' attribute.
+   * @see #getNodeID()
+   * @generated
+   */
+  void setNodeID(String value);
+
+  /**
+   * Returns the value of the '<em><b>Node IP</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Node IP</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Node IP</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Node IP</em>' attribute list.
+   * @return the value of the '<em>Node IP</em>' attribute.
+   * @see #setNodeIP(String)
    * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getNode_NodeIP()
-   * @model unique="false"
+   * @model
    * @generated
    */
-  EList<String> getNodeIP();
+  String getNodeIP();
+
+  /**
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Node#getNodeIP <em>Node IP</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Node IP</em>' attribute.
+   * @see #getNodeIP()
+   * @generated
+   */
+  void setNodeIP(String value);
 
 } // Node
