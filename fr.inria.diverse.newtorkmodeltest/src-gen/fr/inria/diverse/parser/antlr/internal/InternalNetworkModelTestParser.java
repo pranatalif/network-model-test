@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'{'", "'}'", "'.'", "'import'", "'.*'", "'datatype'", "'config'", "'extends'", "'image:'", "'name:'", "'nodeID:'", "'eth0.IP:'", "'Docker'", "'OVS'", "'EthSwitch'", "'Firefox'", "'UbuntuDesktop'", "'NAT'", "'Cloud'", "'bind'", "'with'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'{'", "'}'", "'.'", "'import'", "'.*'", "'datatype'", "'config'", "'extends'", "'image:'", "'name:'", "'nodeID:'", "'eth0.IP:'", "'Docker'", "'OVS'", "'EthSwitch'", "'Firefox'", "'UbuntuDesktop'", "'NAT'", "'Cloud'", "'bind'", "'and'", "'with'", "'linkID:'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -31,7 +31,9 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__11=11;
+    public static final int T__33=33;
     public static final int T__12=12;
+    public static final int T__34=34;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
@@ -1437,11 +1439,11 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleNode"
-    // InternalNetworkModelTest.g:525:1: ruleNode returns [EObject current=null] : ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_node_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' ) ;
+    // InternalNetworkModelTest.g:525:1: ruleNode returns [EObject current=null] : ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' ) ;
     public final EObject ruleNode() throws RecognitionException {
         EObject current = null;
 
-        Token lv_node_1_0=null;
+        Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token lv_image_4_0=null;
@@ -1459,11 +1461,11 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalNetworkModelTest.g:531:2: ( ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_node_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' ) )
-            // InternalNetworkModelTest.g:532:2: ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_node_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' )
+            // InternalNetworkModelTest.g:531:2: ( ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' ) )
+            // InternalNetworkModelTest.g:532:2: ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' )
             {
-            // InternalNetworkModelTest.g:532:2: ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_node_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' )
-            // InternalNetworkModelTest.g:533:3: ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_node_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}'
+            // InternalNetworkModelTest.g:532:2: ( ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}' )
+            // InternalNetworkModelTest.g:533:3: ( (lv_nodetype_0_0= ruleNodeType ) ) ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' (otherlv_3= 'image:' ( (lv_image_4_0= RULE_STRING ) ) )? otherlv_5= 'name:' ( (lv_nodeName_6_0= RULE_STRING ) ) otherlv_7= 'nodeID:' ( (lv_nodeID_8_0= RULE_STRING ) ) (otherlv_9= 'eth0.IP:' ( (lv_nodeIP_10_0= RULE_STRING ) ) )? otherlv_11= '}'
             {
             // InternalNetworkModelTest.g:533:3: ( (lv_nodetype_0_0= ruleNodeType ) )
             // InternalNetworkModelTest.g:534:4: (lv_nodetype_0_0= ruleNodeType )
@@ -1496,15 +1498,15 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
 
             }
 
-            // InternalNetworkModelTest.g:552:3: ( (lv_node_1_0= RULE_ID ) )
-            // InternalNetworkModelTest.g:553:4: (lv_node_1_0= RULE_ID )
+            // InternalNetworkModelTest.g:552:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalNetworkModelTest.g:553:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalNetworkModelTest.g:553:4: (lv_node_1_0= RULE_ID )
-            // InternalNetworkModelTest.g:554:5: lv_node_1_0= RULE_ID
+            // InternalNetworkModelTest.g:553:4: (lv_name_1_0= RULE_ID )
+            // InternalNetworkModelTest.g:554:5: lv_name_1_0= RULE_ID
             {
-            lv_node_1_0=(Token)match(input,RULE_ID,FOLLOW_5); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); 
 
-            					newLeafNode(lv_node_1_0, grammarAccess.getNodeAccess().getNodeIDTerminalRuleCall_1_0());
+            					newLeafNode(lv_name_1_0, grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_1_0());
             				
 
             					if (current==null) {
@@ -1512,8 +1514,8 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
             					}
             					setWithLastConsumed(
             						current,
-            						"node",
-            						lv_node_1_0,
+            						"name",
+            						lv_name_1_0,
             						"org.eclipse.xtext.common.Terminals.ID");
             				
 
@@ -1991,12 +1993,15 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleBinding"
-    // InternalNetworkModelTest.g:780:1: ruleBinding returns [EObject current=null] : (otherlv_0= 'bind' ( (lv_nodeA_1_0= rulenodeA ) ) otherlv_2= 'with' ( (lv_nodeB_3_0= rulenodeB ) ) ) ;
+    // InternalNetworkModelTest.g:780:1: ruleBinding returns [EObject current=null] : (otherlv_0= 'bind' ( (lv_nodeA_1_0= ruleNodeA ) ) otherlv_2= 'and' ( (lv_nodeB_3_0= ruleNodeB ) ) otherlv_4= 'with' otherlv_5= 'linkID:' ( (lv_linkID_6_0= RULE_STRING ) ) ) ;
     public final EObject ruleBinding() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token otherlv_5=null;
+        Token lv_linkID_6_0=null;
         EObject lv_nodeA_1_0 = null;
 
         EObject lv_nodeB_3_0 = null;
@@ -2006,27 +2011,27 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalNetworkModelTest.g:786:2: ( (otherlv_0= 'bind' ( (lv_nodeA_1_0= rulenodeA ) ) otherlv_2= 'with' ( (lv_nodeB_3_0= rulenodeB ) ) ) )
-            // InternalNetworkModelTest.g:787:2: (otherlv_0= 'bind' ( (lv_nodeA_1_0= rulenodeA ) ) otherlv_2= 'with' ( (lv_nodeB_3_0= rulenodeB ) ) )
+            // InternalNetworkModelTest.g:786:2: ( (otherlv_0= 'bind' ( (lv_nodeA_1_0= ruleNodeA ) ) otherlv_2= 'and' ( (lv_nodeB_3_0= ruleNodeB ) ) otherlv_4= 'with' otherlv_5= 'linkID:' ( (lv_linkID_6_0= RULE_STRING ) ) ) )
+            // InternalNetworkModelTest.g:787:2: (otherlv_0= 'bind' ( (lv_nodeA_1_0= ruleNodeA ) ) otherlv_2= 'and' ( (lv_nodeB_3_0= ruleNodeB ) ) otherlv_4= 'with' otherlv_5= 'linkID:' ( (lv_linkID_6_0= RULE_STRING ) ) )
             {
-            // InternalNetworkModelTest.g:787:2: (otherlv_0= 'bind' ( (lv_nodeA_1_0= rulenodeA ) ) otherlv_2= 'with' ( (lv_nodeB_3_0= rulenodeB ) ) )
-            // InternalNetworkModelTest.g:788:3: otherlv_0= 'bind' ( (lv_nodeA_1_0= rulenodeA ) ) otherlv_2= 'with' ( (lv_nodeB_3_0= rulenodeB ) )
+            // InternalNetworkModelTest.g:787:2: (otherlv_0= 'bind' ( (lv_nodeA_1_0= ruleNodeA ) ) otherlv_2= 'and' ( (lv_nodeB_3_0= ruleNodeB ) ) otherlv_4= 'with' otherlv_5= 'linkID:' ( (lv_linkID_6_0= RULE_STRING ) ) )
+            // InternalNetworkModelTest.g:788:3: otherlv_0= 'bind' ( (lv_nodeA_1_0= ruleNodeA ) ) otherlv_2= 'and' ( (lv_nodeB_3_0= ruleNodeB ) ) otherlv_4= 'with' otherlv_5= 'linkID:' ( (lv_linkID_6_0= RULE_STRING ) )
             {
             otherlv_0=(Token)match(input,31,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getBindingAccess().getBindKeyword_0());
             		
-            // InternalNetworkModelTest.g:792:3: ( (lv_nodeA_1_0= rulenodeA ) )
-            // InternalNetworkModelTest.g:793:4: (lv_nodeA_1_0= rulenodeA )
+            // InternalNetworkModelTest.g:792:3: ( (lv_nodeA_1_0= ruleNodeA ) )
+            // InternalNetworkModelTest.g:793:4: (lv_nodeA_1_0= ruleNodeA )
             {
-            // InternalNetworkModelTest.g:793:4: (lv_nodeA_1_0= rulenodeA )
-            // InternalNetworkModelTest.g:794:5: lv_nodeA_1_0= rulenodeA
+            // InternalNetworkModelTest.g:793:4: (lv_nodeA_1_0= ruleNodeA )
+            // InternalNetworkModelTest.g:794:5: lv_nodeA_1_0= ruleNodeA
             {
 
             					newCompositeNode(grammarAccess.getBindingAccess().getNodeANodeAParserRuleCall_1_0());
             				
             pushFollow(FOLLOW_19);
-            lv_nodeA_1_0=rulenodeA();
+            lv_nodeA_1_0=ruleNodeA();
 
             state._fsp--;
 
@@ -2034,11 +2039,11 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
             					if (current==null) {
             						current = createModelElementForParent(grammarAccess.getBindingRule());
             					}
-            					add(
+            					set(
             						current,
             						"nodeA",
             						lv_nodeA_1_0,
-            						"fr.inria.diverse.NetworkModelTest.nodeA");
+            						"fr.inria.diverse.NetworkModelTest.NodeA");
             					afterParserOrEnumRuleCall();
             				
 
@@ -2049,19 +2054,19 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
 
             otherlv_2=(Token)match(input,32,FOLLOW_4); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getBindingAccess().getWithKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getBindingAccess().getAndKeyword_2());
             		
-            // InternalNetworkModelTest.g:815:3: ( (lv_nodeB_3_0= rulenodeB ) )
-            // InternalNetworkModelTest.g:816:4: (lv_nodeB_3_0= rulenodeB )
+            // InternalNetworkModelTest.g:815:3: ( (lv_nodeB_3_0= ruleNodeB ) )
+            // InternalNetworkModelTest.g:816:4: (lv_nodeB_3_0= ruleNodeB )
             {
-            // InternalNetworkModelTest.g:816:4: (lv_nodeB_3_0= rulenodeB )
-            // InternalNetworkModelTest.g:817:5: lv_nodeB_3_0= rulenodeB
+            // InternalNetworkModelTest.g:816:4: (lv_nodeB_3_0= ruleNodeB )
+            // InternalNetworkModelTest.g:817:5: lv_nodeB_3_0= ruleNodeB
             {
 
             					newCompositeNode(grammarAccess.getBindingAccess().getNodeBNodeBParserRuleCall_3_0());
             				
-            pushFollow(FOLLOW_2);
-            lv_nodeB_3_0=rulenodeB();
+            pushFollow(FOLLOW_20);
+            lv_nodeB_3_0=ruleNodeB();
 
             state._fsp--;
 
@@ -2069,12 +2074,46 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
             					if (current==null) {
             						current = createModelElementForParent(grammarAccess.getBindingRule());
             					}
-            					add(
+            					set(
             						current,
             						"nodeB",
             						lv_nodeB_3_0,
-            						"fr.inria.diverse.NetworkModelTest.nodeB");
+            						"fr.inria.diverse.NetworkModelTest.NodeB");
             					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            otherlv_4=(Token)match(input,33,FOLLOW_21); 
+
+            			newLeafNode(otherlv_4, grammarAccess.getBindingAccess().getWithKeyword_4());
+            		
+            otherlv_5=(Token)match(input,34,FOLLOW_14); 
+
+            			newLeafNode(otherlv_5, grammarAccess.getBindingAccess().getLinkIDKeyword_5());
+            		
+            // InternalNetworkModelTest.g:842:3: ( (lv_linkID_6_0= RULE_STRING ) )
+            // InternalNetworkModelTest.g:843:4: (lv_linkID_6_0= RULE_STRING )
+            {
+            // InternalNetworkModelTest.g:843:4: (lv_linkID_6_0= RULE_STRING )
+            // InternalNetworkModelTest.g:844:5: lv_linkID_6_0= RULE_STRING
+            {
+            lv_linkID_6_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            					newLeafNode(lv_linkID_6_0, grammarAccess.getBindingAccess().getLinkIDSTRINGTerminalRuleCall_6_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getBindingRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"linkID",
+            						lv_linkID_6_0,
+            						"org.eclipse.xtext.common.Terminals.STRING");
             				
 
             }
@@ -2104,25 +2143,25 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
     // $ANTLR end "ruleBinding"
 
 
-    // $ANTLR start "entryRulenodeA"
-    // InternalNetworkModelTest.g:838:1: entryRulenodeA returns [EObject current=null] : iv_rulenodeA= rulenodeA EOF ;
-    public final EObject entryRulenodeA() throws RecognitionException {
+    // $ANTLR start "entryRuleNodeA"
+    // InternalNetworkModelTest.g:864:1: entryRuleNodeA returns [EObject current=null] : iv_ruleNodeA= ruleNodeA EOF ;
+    public final EObject entryRuleNodeA() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulenodeA = null;
+        EObject iv_ruleNodeA = null;
 
 
         try {
-            // InternalNetworkModelTest.g:838:46: (iv_rulenodeA= rulenodeA EOF )
-            // InternalNetworkModelTest.g:839:2: iv_rulenodeA= rulenodeA EOF
+            // InternalNetworkModelTest.g:864:46: (iv_ruleNodeA= ruleNodeA EOF )
+            // InternalNetworkModelTest.g:865:2: iv_ruleNodeA= ruleNodeA EOF
             {
              newCompositeNode(grammarAccess.getNodeARule()); 
             pushFollow(FOLLOW_1);
-            iv_rulenodeA=rulenodeA();
+            iv_ruleNodeA=ruleNodeA();
 
             state._fsp--;
 
-             current =iv_rulenodeA; 
+             current =iv_ruleNodeA; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2137,15 +2176,15 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         }
         return current;
     }
-    // $ANTLR end "entryRulenodeA"
+    // $ANTLR end "entryRuleNodeA"
 
 
-    // $ANTLR start "rulenodeA"
-    // InternalNetworkModelTest.g:845:1: rulenodeA returns [EObject current=null] : ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) ;
-    public final EObject rulenodeA() throws RecognitionException {
+    // $ANTLR start "ruleNodeA"
+    // InternalNetworkModelTest.g:871:1: ruleNodeA returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) ;
+    public final EObject ruleNodeA() throws RecognitionException {
         EObject current = null;
 
-        Token lv_node_0_0=null;
+        Token lv_name_0_0=null;
         Token otherlv_1=null;
         Token lv_eth_2_0=null;
 
@@ -2153,21 +2192,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalNetworkModelTest.g:851:2: ( ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) )
-            // InternalNetworkModelTest.g:852:2: ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
+            // InternalNetworkModelTest.g:877:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) )
+            // InternalNetworkModelTest.g:878:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
             {
-            // InternalNetworkModelTest.g:852:2: ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
-            // InternalNetworkModelTest.g:853:3: ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) )
+            // InternalNetworkModelTest.g:878:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
+            // InternalNetworkModelTest.g:879:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) )
             {
-            // InternalNetworkModelTest.g:853:3: ( (lv_node_0_0= RULE_ID ) )
-            // InternalNetworkModelTest.g:854:4: (lv_node_0_0= RULE_ID )
+            // InternalNetworkModelTest.g:879:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalNetworkModelTest.g:880:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalNetworkModelTest.g:854:4: (lv_node_0_0= RULE_ID )
-            // InternalNetworkModelTest.g:855:5: lv_node_0_0= RULE_ID
+            // InternalNetworkModelTest.g:880:4: (lv_name_0_0= RULE_ID )
+            // InternalNetworkModelTest.g:881:5: lv_name_0_0= RULE_ID
             {
-            lv_node_0_0=(Token)match(input,RULE_ID,FOLLOW_20); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_22); 
 
-            					newLeafNode(lv_node_0_0, grammarAccess.getNodeAAccess().getNodeIDTerminalRuleCall_0_0());
+            					newLeafNode(lv_name_0_0, grammarAccess.getNodeAAccess().getNameIDTerminalRuleCall_0_0());
             				
 
             					if (current==null) {
@@ -2175,8 +2214,8 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
             					}
             					setWithLastConsumed(
             						current,
-            						"node",
-            						lv_node_0_0,
+            						"name",
+            						lv_name_0_0,
             						"org.eclipse.xtext.common.Terminals.ID");
             				
 
@@ -2189,11 +2228,11 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
 
             			newLeafNode(otherlv_1, grammarAccess.getNodeAAccess().getFullStopKeyword_1());
             		
-            // InternalNetworkModelTest.g:875:3: ( (lv_eth_2_0= RULE_ID ) )
-            // InternalNetworkModelTest.g:876:4: (lv_eth_2_0= RULE_ID )
+            // InternalNetworkModelTest.g:901:3: ( (lv_eth_2_0= RULE_ID ) )
+            // InternalNetworkModelTest.g:902:4: (lv_eth_2_0= RULE_ID )
             {
-            // InternalNetworkModelTest.g:876:4: (lv_eth_2_0= RULE_ID )
-            // InternalNetworkModelTest.g:877:5: lv_eth_2_0= RULE_ID
+            // InternalNetworkModelTest.g:902:4: (lv_eth_2_0= RULE_ID )
+            // InternalNetworkModelTest.g:903:5: lv_eth_2_0= RULE_ID
             {
             lv_eth_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -2234,28 +2273,28 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         }
         return current;
     }
-    // $ANTLR end "rulenodeA"
+    // $ANTLR end "ruleNodeA"
 
 
-    // $ANTLR start "entryRulenodeB"
-    // InternalNetworkModelTest.g:897:1: entryRulenodeB returns [EObject current=null] : iv_rulenodeB= rulenodeB EOF ;
-    public final EObject entryRulenodeB() throws RecognitionException {
+    // $ANTLR start "entryRuleNodeB"
+    // InternalNetworkModelTest.g:923:1: entryRuleNodeB returns [EObject current=null] : iv_ruleNodeB= ruleNodeB EOF ;
+    public final EObject entryRuleNodeB() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_rulenodeB = null;
+        EObject iv_ruleNodeB = null;
 
 
         try {
-            // InternalNetworkModelTest.g:897:46: (iv_rulenodeB= rulenodeB EOF )
-            // InternalNetworkModelTest.g:898:2: iv_rulenodeB= rulenodeB EOF
+            // InternalNetworkModelTest.g:923:46: (iv_ruleNodeB= ruleNodeB EOF )
+            // InternalNetworkModelTest.g:924:2: iv_ruleNodeB= ruleNodeB EOF
             {
              newCompositeNode(grammarAccess.getNodeBRule()); 
             pushFollow(FOLLOW_1);
-            iv_rulenodeB=rulenodeB();
+            iv_ruleNodeB=ruleNodeB();
 
             state._fsp--;
 
-             current =iv_rulenodeB; 
+             current =iv_ruleNodeB; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -2270,15 +2309,15 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         }
         return current;
     }
-    // $ANTLR end "entryRulenodeB"
+    // $ANTLR end "entryRuleNodeB"
 
 
-    // $ANTLR start "rulenodeB"
-    // InternalNetworkModelTest.g:904:1: rulenodeB returns [EObject current=null] : ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) ;
-    public final EObject rulenodeB() throws RecognitionException {
+    // $ANTLR start "ruleNodeB"
+    // InternalNetworkModelTest.g:930:1: ruleNodeB returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) ;
+    public final EObject ruleNodeB() throws RecognitionException {
         EObject current = null;
 
-        Token lv_node_0_0=null;
+        Token lv_name_0_0=null;
         Token otherlv_1=null;
         Token lv_eth_2_0=null;
 
@@ -2286,21 +2325,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalNetworkModelTest.g:910:2: ( ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) )
-            // InternalNetworkModelTest.g:911:2: ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
+            // InternalNetworkModelTest.g:936:2: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) ) )
+            // InternalNetworkModelTest.g:937:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
             {
-            // InternalNetworkModelTest.g:911:2: ( ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
-            // InternalNetworkModelTest.g:912:3: ( (lv_node_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) )
+            // InternalNetworkModelTest.g:937:2: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) ) )
+            // InternalNetworkModelTest.g:938:3: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '.' ( (lv_eth_2_0= RULE_ID ) )
             {
-            // InternalNetworkModelTest.g:912:3: ( (lv_node_0_0= RULE_ID ) )
-            // InternalNetworkModelTest.g:913:4: (lv_node_0_0= RULE_ID )
+            // InternalNetworkModelTest.g:938:3: ( (lv_name_0_0= RULE_ID ) )
+            // InternalNetworkModelTest.g:939:4: (lv_name_0_0= RULE_ID )
             {
-            // InternalNetworkModelTest.g:913:4: (lv_node_0_0= RULE_ID )
-            // InternalNetworkModelTest.g:914:5: lv_node_0_0= RULE_ID
+            // InternalNetworkModelTest.g:939:4: (lv_name_0_0= RULE_ID )
+            // InternalNetworkModelTest.g:940:5: lv_name_0_0= RULE_ID
             {
-            lv_node_0_0=(Token)match(input,RULE_ID,FOLLOW_20); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_22); 
 
-            					newLeafNode(lv_node_0_0, grammarAccess.getNodeBAccess().getNodeIDTerminalRuleCall_0_0());
+            					newLeafNode(lv_name_0_0, grammarAccess.getNodeBAccess().getNameIDTerminalRuleCall_0_0());
             				
 
             					if (current==null) {
@@ -2308,8 +2347,8 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
             					}
             					setWithLastConsumed(
             						current,
-            						"node",
-            						lv_node_0_0,
+            						"name",
+            						lv_name_0_0,
             						"org.eclipse.xtext.common.Terminals.ID");
             				
 
@@ -2322,11 +2361,11 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
 
             			newLeafNode(otherlv_1, grammarAccess.getNodeBAccess().getFullStopKeyword_1());
             		
-            // InternalNetworkModelTest.g:934:3: ( (lv_eth_2_0= RULE_ID ) )
-            // InternalNetworkModelTest.g:935:4: (lv_eth_2_0= RULE_ID )
+            // InternalNetworkModelTest.g:960:3: ( (lv_eth_2_0= RULE_ID ) )
+            // InternalNetworkModelTest.g:961:4: (lv_eth_2_0= RULE_ID )
             {
-            // InternalNetworkModelTest.g:935:4: (lv_eth_2_0= RULE_ID )
-            // InternalNetworkModelTest.g:936:5: lv_eth_2_0= RULE_ID
+            // InternalNetworkModelTest.g:961:4: (lv_eth_2_0= RULE_ID )
+            // InternalNetworkModelTest.g:962:5: lv_eth_2_0= RULE_ID
             {
             lv_eth_2_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -2367,7 +2406,7 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
         }
         return current;
     }
-    // $ANTLR end "rulenodeB"
+    // $ANTLR end "ruleNodeB"
 
     // Delegated rules
 
@@ -2393,6 +2432,8 @@ public class InternalNetworkModelTestParser extends AbstractInternalAntlrParser 
     public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000802000L});
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000000004000L});
 
 }

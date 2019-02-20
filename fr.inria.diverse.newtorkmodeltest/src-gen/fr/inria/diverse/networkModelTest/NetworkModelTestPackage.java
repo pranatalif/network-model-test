@@ -300,13 +300,13 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE__NODETYPE = 0;
 
   /**
-   * The feature id for the '<em><b>Node</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE__NODE = 1;
+  int NODE__NAME = 1;
 
   /**
    * The feature id for the '<em><b>Image</b></em>' attribute.
@@ -392,7 +392,7 @@ public interface NetworkModelTestPackage extends EPackage
   int BINDING = 9;
 
   /**
-   * The feature id for the '<em><b>Node A</b></em>' containment reference list.
+   * The feature id for the '<em><b>Node A</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -401,7 +401,7 @@ public interface NetworkModelTestPackage extends EPackage
   int BINDING__NODE_A = 0;
 
   /**
-   * The feature id for the '<em><b>Node B</b></em>' containment reference list.
+   * The feature id for the '<em><b>Node B</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -410,32 +410,69 @@ public interface NetworkModelTestPackage extends EPackage
   int BINDING__NODE_B = 1;
 
   /**
+   * The feature id for the '<em><b>Link ID</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BINDING__LINK_ID = 2;
+
+  /**
    * The number of structural features of the '<em>Binding</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BINDING_FEATURE_COUNT = 2;
+  int BINDING_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link fr.inria.diverse.networkModelTest.impl.nodeAImpl <em>node A</em>}' class.
+   * The meta object id for the '{@link fr.inria.diverse.networkModelTest.impl.LinkIDImpl <em>Link ID</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.inria.diverse.networkModelTest.impl.nodeAImpl
-   * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getnodeA()
+   * @see fr.inria.diverse.networkModelTest.impl.LinkIDImpl
+   * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getLinkID()
    * @generated
    */
-  int NODE_A = 10;
+  int LINK_ID = 10;
 
   /**
-   * The feature id for the '<em><b>Node</b></em>' attribute.
+   * The feature id for the '<em><b>Link ID</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_A__NODE = 0;
+  int LINK_ID__LINK_ID = 0;
+
+  /**
+   * The number of structural features of the '<em>Link ID</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LINK_ID_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link fr.inria.diverse.networkModelTest.impl.NodeAImpl <em>Node A</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.inria.diverse.networkModelTest.impl.NodeAImpl
+   * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getNodeA()
+   * @generated
+   */
+  int NODE_A = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NODE_A__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Eth</b></em>' attribute.
@@ -447,7 +484,7 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE_A__ETH = 1;
 
   /**
-   * The number of structural features of the '<em>node A</em>' class.
+   * The number of structural features of the '<em>Node A</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -456,23 +493,23 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE_A_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link fr.inria.diverse.networkModelTest.impl.nodeBImpl <em>node B</em>}' class.
+   * The meta object id for the '{@link fr.inria.diverse.networkModelTest.impl.NodeBImpl <em>Node B</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.inria.diverse.networkModelTest.impl.nodeBImpl
-   * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getnodeB()
+   * @see fr.inria.diverse.networkModelTest.impl.NodeBImpl
+   * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getNodeB()
    * @generated
    */
-  int NODE_B = 11;
+  int NODE_B = 12;
 
   /**
-   * The feature id for the '<em><b>Node</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NODE_B__NODE = 0;
+  int NODE_B__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Eth</b></em>' attribute.
@@ -484,7 +521,7 @@ public interface NetworkModelTestPackage extends EPackage
   int NODE_B__ETH = 1;
 
   /**
-   * The number of structural features of the '<em>node B</em>' class.
+   * The number of structural features of the '<em>Node B</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -673,15 +710,15 @@ public interface NetworkModelTestPackage extends EPackage
   EReference getNode_Nodetype();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.Node#getNode <em>Node</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.Node#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Node</em>'.
-   * @see fr.inria.diverse.networkModelTest.Node#getNode()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.inria.diverse.networkModelTest.Node#getName()
    * @see #getNode()
    * @generated
    */
-  EAttribute getNode_Node();
+  EAttribute getNode_Name();
 
   /**
    * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.Node#getImage <em>Image</em>}'.
@@ -759,10 +796,10 @@ public interface NetworkModelTestPackage extends EPackage
   EClass getBinding();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.inria.diverse.networkModelTest.Binding#getNodeA <em>Node A</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.inria.diverse.networkModelTest.Binding#getNodeA <em>Node A</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Node A</em>'.
+   * @return the meta object for the containment reference '<em>Node A</em>'.
    * @see fr.inria.diverse.networkModelTest.Binding#getNodeA()
    * @see #getBinding()
    * @generated
@@ -770,10 +807,10 @@ public interface NetworkModelTestPackage extends EPackage
   EReference getBinding_NodeA();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.inria.diverse.networkModelTest.Binding#getNodeB <em>Node B</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.inria.diverse.networkModelTest.Binding#getNodeB <em>Node B</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Node B</em>'.
+   * @return the meta object for the containment reference '<em>Node B</em>'.
    * @see fr.inria.diverse.networkModelTest.Binding#getNodeB()
    * @see #getBinding()
    * @generated
@@ -781,68 +818,100 @@ public interface NetworkModelTestPackage extends EPackage
   EReference getBinding_NodeB();
 
   /**
-   * Returns the meta object for class '{@link fr.inria.diverse.networkModelTest.nodeA <em>node A</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.Binding#getLinkID <em>Link ID</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>node A</em>'.
-   * @see fr.inria.diverse.networkModelTest.nodeA
+   * @return the meta object for the attribute '<em>Link ID</em>'.
+   * @see fr.inria.diverse.networkModelTest.Binding#getLinkID()
+   * @see #getBinding()
    * @generated
    */
-  EClass getnodeA();
+  EAttribute getBinding_LinkID();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.nodeA#getNode <em>Node</em>}'.
+   * Returns the meta object for class '{@link fr.inria.diverse.networkModelTest.LinkID <em>Link ID</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Node</em>'.
-   * @see fr.inria.diverse.networkModelTest.nodeA#getNode()
-   * @see #getnodeA()
+   * @return the meta object for class '<em>Link ID</em>'.
+   * @see fr.inria.diverse.networkModelTest.LinkID
    * @generated
    */
-  EAttribute getnodeA_Node();
+  EClass getLinkID();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.nodeA#getEth <em>Eth</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.LinkID#getLinkID <em>Link ID</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Link ID</em>'.
+   * @see fr.inria.diverse.networkModelTest.LinkID#getLinkID()
+   * @see #getLinkID()
+   * @generated
+   */
+  EAttribute getLinkID_LinkID();
+
+  /**
+   * Returns the meta object for class '{@link fr.inria.diverse.networkModelTest.NodeA <em>Node A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Node A</em>'.
+   * @see fr.inria.diverse.networkModelTest.NodeA
+   * @generated
+   */
+  EClass getNodeA();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.NodeA#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.inria.diverse.networkModelTest.NodeA#getName()
+   * @see #getNodeA()
+   * @generated
+   */
+  EAttribute getNodeA_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.NodeA#getEth <em>Eth</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Eth</em>'.
-   * @see fr.inria.diverse.networkModelTest.nodeA#getEth()
-   * @see #getnodeA()
+   * @see fr.inria.diverse.networkModelTest.NodeA#getEth()
+   * @see #getNodeA()
    * @generated
    */
-  EAttribute getnodeA_Eth();
+  EAttribute getNodeA_Eth();
 
   /**
-   * Returns the meta object for class '{@link fr.inria.diverse.networkModelTest.nodeB <em>node B</em>}'.
+   * Returns the meta object for class '{@link fr.inria.diverse.networkModelTest.NodeB <em>Node B</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>node B</em>'.
-   * @see fr.inria.diverse.networkModelTest.nodeB
+   * @return the meta object for class '<em>Node B</em>'.
+   * @see fr.inria.diverse.networkModelTest.NodeB
    * @generated
    */
-  EClass getnodeB();
+  EClass getNodeB();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.nodeB#getNode <em>Node</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.NodeB#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Node</em>'.
-   * @see fr.inria.diverse.networkModelTest.nodeB#getNode()
-   * @see #getnodeB()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see fr.inria.diverse.networkModelTest.NodeB#getName()
+   * @see #getNodeB()
    * @generated
    */
-  EAttribute getnodeB_Node();
+  EAttribute getNodeB_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.nodeB#getEth <em>Eth</em>}'.
+   * Returns the meta object for the attribute '{@link fr.inria.diverse.networkModelTest.NodeB#getEth <em>Eth</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Eth</em>'.
-   * @see fr.inria.diverse.networkModelTest.nodeB#getEth()
-   * @see #getnodeB()
+   * @see fr.inria.diverse.networkModelTest.NodeB#getEth()
+   * @see #getNodeB()
    * @generated
    */
-  EAttribute getnodeB_Eth();
+  EAttribute getNodeB_Eth();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1020,12 +1089,12 @@ public interface NetworkModelTestPackage extends EPackage
     EReference NODE__NODETYPE = eINSTANCE.getNode_Nodetype();
 
     /**
-     * The meta object literal for the '<em><b>Node</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE__NODE = eINSTANCE.getNode_Node();
+    EAttribute NODE__NAME = eINSTANCE.getNode_Name();
 
     /**
      * The meta object literal for the '<em><b>Image</b></em>' attribute feature.
@@ -1088,7 +1157,7 @@ public interface NetworkModelTestPackage extends EPackage
     EClass BINDING = eINSTANCE.getBinding();
 
     /**
-     * The meta object literal for the '<em><b>Node A</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Node A</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1096,7 +1165,7 @@ public interface NetworkModelTestPackage extends EPackage
     EReference BINDING__NODE_A = eINSTANCE.getBinding_NodeA();
 
     /**
-     * The meta object literal for the '<em><b>Node B</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Node B</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1104,22 +1173,48 @@ public interface NetworkModelTestPackage extends EPackage
     EReference BINDING__NODE_B = eINSTANCE.getBinding_NodeB();
 
     /**
-     * The meta object literal for the '{@link fr.inria.diverse.networkModelTest.impl.nodeAImpl <em>node A</em>}' class.
+     * The meta object literal for the '<em><b>Link ID</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see fr.inria.diverse.networkModelTest.impl.nodeAImpl
-     * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getnodeA()
      * @generated
      */
-    EClass NODE_A = eINSTANCE.getnodeA();
+    EAttribute BINDING__LINK_ID = eINSTANCE.getBinding_LinkID();
 
     /**
-     * The meta object literal for the '<em><b>Node</b></em>' attribute feature.
+     * The meta object literal for the '{@link fr.inria.diverse.networkModelTest.impl.LinkIDImpl <em>Link ID</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.inria.diverse.networkModelTest.impl.LinkIDImpl
+     * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getLinkID()
+     * @generated
+     */
+    EClass LINK_ID = eINSTANCE.getLinkID();
+
+    /**
+     * The meta object literal for the '<em><b>Link ID</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_A__NODE = eINSTANCE.getnodeA_Node();
+    EAttribute LINK_ID__LINK_ID = eINSTANCE.getLinkID_LinkID();
+
+    /**
+     * The meta object literal for the '{@link fr.inria.diverse.networkModelTest.impl.NodeAImpl <em>Node A</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.inria.diverse.networkModelTest.impl.NodeAImpl
+     * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getNodeA()
+     * @generated
+     */
+    EClass NODE_A = eINSTANCE.getNodeA();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NODE_A__NAME = eINSTANCE.getNodeA_Name();
 
     /**
      * The meta object literal for the '<em><b>Eth</b></em>' attribute feature.
@@ -1127,25 +1222,25 @@ public interface NetworkModelTestPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_A__ETH = eINSTANCE.getnodeA_Eth();
+    EAttribute NODE_A__ETH = eINSTANCE.getNodeA_Eth();
 
     /**
-     * The meta object literal for the '{@link fr.inria.diverse.networkModelTest.impl.nodeBImpl <em>node B</em>}' class.
+     * The meta object literal for the '{@link fr.inria.diverse.networkModelTest.impl.NodeBImpl <em>Node B</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see fr.inria.diverse.networkModelTest.impl.nodeBImpl
-     * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getnodeB()
+     * @see fr.inria.diverse.networkModelTest.impl.NodeBImpl
+     * @see fr.inria.diverse.networkModelTest.impl.NetworkModelTestPackageImpl#getNodeB()
      * @generated
      */
-    EClass NODE_B = eINSTANCE.getnodeB();
+    EClass NODE_B = eINSTANCE.getNodeB();
 
     /**
-     * The meta object literal for the '<em><b>Node</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_B__NODE = eINSTANCE.getnodeB_Node();
+    EAttribute NODE_B__NAME = eINSTANCE.getNodeB_Name();
 
     /**
      * The meta object literal for the '<em><b>Eth</b></em>' attribute feature.
@@ -1153,7 +1248,7 @@ public interface NetworkModelTestPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute NODE_B__ETH = eINSTANCE.getnodeB_Eth();
+    EAttribute NODE_B__ETH = eINSTANCE.getNodeB_Eth();
 
   }
 

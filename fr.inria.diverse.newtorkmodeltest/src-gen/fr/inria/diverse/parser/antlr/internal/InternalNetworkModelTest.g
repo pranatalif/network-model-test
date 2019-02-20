@@ -551,9 +551,9 @@ ruleNode returns [EObject current=null]
 		)
 		(
 			(
-				lv_node_1_0=RULE_ID
+				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_node_1_0, grammarAccess.getNodeAccess().getNodeIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -561,8 +561,8 @@ ruleNode returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"node",
-						lv_node_1_0,
+						"name",
+						lv_name_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -794,55 +794,81 @@ ruleBinding returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getBindingAccess().getNodeANodeAParserRuleCall_1_0());
 				}
-				lv_nodeA_1_0=rulenodeA
+				lv_nodeA_1_0=ruleNodeA
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getBindingRule());
 					}
-					add(
+					set(
 						$current,
 						"nodeA",
 						lv_nodeA_1_0,
-						"fr.inria.diverse.NetworkModelTest.nodeA");
+						"fr.inria.diverse.NetworkModelTest.NodeA");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_2='with'
+		otherlv_2='and'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getBindingAccess().getWithKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getBindingAccess().getAndKeyword_2());
 		}
 		(
 			(
 				{
 					newCompositeNode(grammarAccess.getBindingAccess().getNodeBNodeBParserRuleCall_3_0());
 				}
-				lv_nodeB_3_0=rulenodeB
+				lv_nodeB_3_0=ruleNodeB
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getBindingRule());
 					}
-					add(
+					set(
 						$current,
 						"nodeB",
 						lv_nodeB_3_0,
-						"fr.inria.diverse.NetworkModelTest.nodeB");
+						"fr.inria.diverse.NetworkModelTest.NodeB");
 					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4='with'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getBindingAccess().getWithKeyword_4());
+		}
+		otherlv_5='linkID:'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getBindingAccess().getLinkIDKeyword_5());
+		}
+		(
+			(
+				lv_linkID_6_0=RULE_STRING
+				{
+					newLeafNode(lv_linkID_6_0, grammarAccess.getBindingAccess().getLinkIDSTRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getBindingRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"linkID",
+						lv_linkID_6_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
 	)
 ;
 
-// Entry rule entryRulenodeA
-entryRulenodeA returns [EObject current=null]:
+// Entry rule entryRuleNodeA
+entryRuleNodeA returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getNodeARule()); }
-	iv_rulenodeA=rulenodeA
-	{ $current=$iv_rulenodeA.current; }
+	iv_ruleNodeA=ruleNodeA
+	{ $current=$iv_ruleNodeA.current; }
 	EOF;
 
-// Rule nodeA
-rulenodeA returns [EObject current=null]
+// Rule NodeA
+ruleNodeA returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -852,9 +878,9 @@ rulenodeA returns [EObject current=null]
 	(
 		(
 			(
-				lv_node_0_0=RULE_ID
+				lv_name_0_0=RULE_ID
 				{
-					newLeafNode(lv_node_0_0, grammarAccess.getNodeAAccess().getNodeIDTerminalRuleCall_0_0());
+					newLeafNode(lv_name_0_0, grammarAccess.getNodeAAccess().getNameIDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -862,8 +888,8 @@ rulenodeA returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"node",
-						lv_node_0_0,
+						"name",
+						lv_name_0_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -893,15 +919,15 @@ rulenodeA returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRulenodeB
-entryRulenodeB returns [EObject current=null]:
+// Entry rule entryRuleNodeB
+entryRuleNodeB returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getNodeBRule()); }
-	iv_rulenodeB=rulenodeB
-	{ $current=$iv_rulenodeB.current; }
+	iv_ruleNodeB=ruleNodeB
+	{ $current=$iv_ruleNodeB.current; }
 	EOF;
 
-// Rule nodeB
-rulenodeB returns [EObject current=null]
+// Rule NodeB
+ruleNodeB returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -911,9 +937,9 @@ rulenodeB returns [EObject current=null]
 	(
 		(
 			(
-				lv_node_0_0=RULE_ID
+				lv_name_0_0=RULE_ID
 				{
-					newLeafNode(lv_node_0_0, grammarAccess.getNodeBAccess().getNodeIDTerminalRuleCall_0_0());
+					newLeafNode(lv_name_0_0, grammarAccess.getNodeBAccess().getNameIDTerminalRuleCall_0_0());
 				}
 				{
 					if ($current==null) {
@@ -921,8 +947,8 @@ rulenodeB returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"node",
-						lv_node_0_0,
+						"name",
+						lv_name_0_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)

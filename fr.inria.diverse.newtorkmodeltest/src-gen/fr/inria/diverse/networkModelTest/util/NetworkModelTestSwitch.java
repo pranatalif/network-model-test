@@ -150,17 +150,24 @@ public class NetworkModelTestSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case NetworkModelTestPackage.LINK_ID:
+      {
+        LinkID linkID = (LinkID)theEObject;
+        T result = caseLinkID(linkID);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case NetworkModelTestPackage.NODE_A:
       {
-        nodeA nodeA = (nodeA)theEObject;
-        T result = casenodeA(nodeA);
+        NodeA nodeA = (NodeA)theEObject;
+        T result = caseNodeA(nodeA);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
       case NetworkModelTestPackage.NODE_B:
       {
-        nodeB nodeB = (nodeB)theEObject;
-        T result = casenodeB(nodeB);
+        NodeB nodeB = (NodeB)theEObject;
+        T result = caseNodeB(nodeB);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -329,33 +336,49 @@ public class NetworkModelTestSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>node A</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Link ID</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>node A</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Link ID</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casenodeA(nodeA object)
+  public T caseLinkID(LinkID object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>node B</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Node A</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>node B</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Node A</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casenodeB(nodeB object)
+  public T caseNodeA(NodeA object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Node B</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Node B</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNodeB(NodeB object)
   {
     return null;
   }

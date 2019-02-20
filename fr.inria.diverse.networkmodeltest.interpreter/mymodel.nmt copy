@@ -1,4 +1,4 @@
-config ConfigLvl1{
+				config ConfigLvl1{
 					OVS nodeOVS1{
 						name: "Openvswitchmanagement-3"
 						nodeID: "7508c161-e3c3-4e6d-8004-0ae0f2b7c7f6"
@@ -122,32 +122,31 @@ config ConfigLvl1{
 						name: "NAT-3"
 						nodeID: "e464c182-039f-4b9b-9bbf-3786c2f2f92d"
 					}
-					bind nodeOVS1.eth5 and nodeDockerUbuntu1.eth0 linkID: "98185da1-7c1b-4dae-9311-7789a68d24c1"
-					bind nodeOVS1.eth2 and nodeFirefox1.e0 linkID: "1fe6df82-4464-4935-a93e-a14b91733c69"
-					bind nodeOVS1.eth3 and nodeEthSwitch1.e0 linkID: "9c6de63a-df38-4d9b-8bd3-2314e2b826d0"
-					bind nodeOVS1.eth4 and nodeDockerUbuntu2.eth0 linkID: "897f9993-018a-4817-a229-ab5a3a50a769"
-					bind nodeEthSwitch1.e2 and nodeNAT1.nat0 linkID: "fcea4ae0-784e-454e-9fa9-d4120f577ba6"
-					bind nodeEthSwitch1.e6 and nodeOVS5.eth1 linkID: "349694ae-1f3c-4a11-ba1e-ec1c33b85c88"
-					bind nodeEthSwitch1.e5 and nodeOVS4.eth1 linkID: "c8a0f51f-ec4a-4ed2-8f48-59e09822fbf1"
-				bind nodeEthSwitch1.e4 and nodeOVS3.eth1 linkID: "fbeb1cca-980f-4381-aac2-e28e3759e950"
-				bind nodeEthSwitch1.e3 and nodeOVS2.eth1 linkID: "168778a8-84f9-45cb-9ee8-a31868fd3b44"
-				bind nodeEthSwitch1.e1 and nodeDockerUbuntu3.eth0 linkID: "141822b8-0e61-447a-a3e6-ad7fdee6b755"
-				bind nodeOVS2.eth7 and nodeOVS5.eth2 linkID: "a7dab595-02ac-4d5a-946f-ff38b714005f"
-				bind nodeOVS2.eth5 and nodeOVS4.eth6 linkID: "3d92c5ad-ed30-4c30-b7dc-dbbae71647b1"
-				bind nodeOVS2.eth6 and nodeOVS3.eth4 linkID: "bb8dfba3-b160-4471-b940-d6d2b3ec1930"
-				bind nodeOVS2.eth4 and nodeDockerUbuntu3.eth0 linkID: "69b62099-71f2-4adb-b4f5-60ad1f4170a6"
-				bind nodeOVS2.eth3 and nodeDockerUbuntu2.eth0 linkID: "240d94a3-fd28-4a20-b91b-c6193a86aee0"
-				bind nodeOVS2.eth2 and nodeVideoServer.eth0 linkID: "7d3396e6-7447-4b63-bdef-4d383eb113f5"
-				bind nodeOVS3.eth7 and nodeNAT2.nat0 linkID: "93190686-5826-4672-83ac-421d483f69d0"
-				bind nodeOVS3.eth6 and nodeOVS5.eth6 linkID: "45bd967f-f9bc-456d-bfe2-e83c1d59f7b5"
-				bind nodeOVS3.eth5 and nodeOVS4.eth4 linkID: "d0ba44e4-36f2-4601-b39d-3563bbe8fd90"
-				bind nodeOVS3.eth3 and nodeDockerUbuntu5.eth0 linkID: "a8f01ff6-8033-461f-aefd-76c0a5f7d4b6"
-				bind nodeOVS3.eth2 and nodeDockerUbuntu4.eth0 linkID: "379c4382-b935-48fd-8fbb-8e925b11798a"
-				bind nodeOVS4.eth7 and nodeNAT3.nat0 linkID: "53783b1b-0c4e-4bdf-a933-74daa68f533b"
-				bind nodeOVS4.eth5 and nodeOVS5.eth5 linkID: "3a797621-3ac3-4326-9f36-5466753a3af5"
-				bind nodeOVS4.eth3 and nodeDockerUbuntu7.eth0 linkID: "b6b344db-9f1c-44ca-a774-41010cc6fe9b"
-				bind nodeOVS4.eth2 and nodeDockerUbuntu6.eth0 linkID: "991b16e0-2048-42c7-b8a4-61380b3afb40"
-				bind nodeOVS5.eth4 and nodeDockerUbuntu9.eth0 linkID: "c3af3af2-29b1-4b97-9785-587f3e2d3e18"
-				bind nodeOVS5.eth3 and nodeVideoClient.eth0 linkID: "20020843-9538-4e0c-98ce-8af19e68d56c"
-				bind nodeOVS5.eth2 and nodeDockerUbuntu8.eth0 linkID: "5d7630ca-7428-4638-87f8-0a1b0efd1b43"
-				}
+					bind nodeOVS1.eth5 with nodeDockerUbuntu1.eth0
+					bind nodeOVS1.eth2 with nodeFirefox1.e0
+					bind nodeOVS1.eth3 with nodeEthSwitch1.e0
+					bind nodeOVS1.eth4 with nodeDockerUbuntu2.eth0
+					bind nodeEthSwitch.e2 with nodeNAT.nat0
+					bind nodeEthSwitch.e6 with nodeOVS5.eth1
+					bind nodeEthSwitch.e5 with nodeOVS4.eth1
+					bind nodeEthSwitch.e4 with nodeOVS3.eth1
+					bind nodeEthSwitch.e3 with nodeOVS2.eth1
+					bind nodeEthSwitch.e1 with nodeDockerUbuntu3.eth0
+					bind nodeOVS2.eth7 with nodeOVS5.eth2
+					bind nodeOVS2.eth5 with nodeOVS4.eth6
+					bind nodeOVS2.eth6 with nodeOVS3.eth4
+					bind nodeOVS2.eth4 with nodeDockerUbuntu3.eth0
+					bind nodeOVS2.eth3 with nodeDockerUbuntu2.eth0
+					bind nodeOVS2.eth2 with nodeVideoServer.eth0
+					bind nodeOVS3.eth7 with nodeNAT2.nat0
+					bind nodeOVS3.eth6 with nodeOVS5.eth6
+					bind nodeOVS3.eth5 with nodeOVS4.eth4
+					bind nodeOVS3.eth3 with nodeDockerUbuntu5.eth0
+					bind nodeOVS3.eth2 with nodeDockerUbuntu4.eth0
+					bind nodeOVS4.eth7 with nodeNAT3.nat0
+					bind nodeOVS4.eth5 with nodeOVS5.eth5
+					bind nodeOVS4.eth3 with nodeDockerUbuntu.eth7
+					bind nodeOVS4.eth2 with nodeDockerUbuntu.eth6
+					bind nodeOVS5.eth4 with nodeDockerUbuntu9.eth0
+					bind nodeOVS5.eth3 with nodeVideoClient.eth0
+					bind nodeOVS5.eth2 with nodeDockerUbuntu8.eth0

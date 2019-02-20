@@ -114,22 +114,31 @@ public interface NetworkModelTestFactory extends EFactory
   Binding createBinding();
 
   /**
-   * Returns a new object of class '<em>node A</em>'.
+   * Returns a new object of class '<em>Link ID</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>node A</em>'.
+   * @return a new object of class '<em>Link ID</em>'.
    * @generated
    */
-  nodeA createnodeA();
+  LinkID createLinkID();
 
   /**
-   * Returns a new object of class '<em>node B</em>'.
+   * Returns a new object of class '<em>Node A</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>node B</em>'.
+   * @return a new object of class '<em>Node A</em>'.
    * @generated
    */
-  nodeB createnodeB();
+  NodeA createNodeA();
+
+  /**
+   * Returns a new object of class '<em>Node B</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Node B</em>'.
+   * @generated
+   */
+  NodeB createNodeB();
 
   /**
    * Returns the package supported by this factory.

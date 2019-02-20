@@ -3,8 +3,6 @@
  */
 package fr.inria.diverse.networkModelTest;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.inria.diverse.networkModelTest.Binding#getNodeA <em>Node A</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.Binding#getNodeB <em>Node B</em>}</li>
+ *   <li>{@link fr.inria.diverse.networkModelTest.Binding#getLinkID <em>Link ID</em>}</li>
  * </ul>
  *
  * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getBinding()
@@ -27,35 +26,81 @@ import org.eclipse.emf.ecore.EObject;
 public interface Binding extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Node A</b></em>' containment reference list.
-   * The list contents are of type {@link fr.inria.diverse.networkModelTest.nodeA}.
+   * Returns the value of the '<em><b>Node A</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Node A</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Node A</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Node A</em>' containment reference list.
+   * @return the value of the '<em>Node A</em>' containment reference.
+   * @see #setNodeA(NodeA)
    * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getBinding_NodeA()
    * @model containment="true"
    * @generated
    */
-  EList<nodeA> getNodeA();
+  NodeA getNodeA();
 
   /**
-   * Returns the value of the '<em><b>Node B</b></em>' containment reference list.
-   * The list contents are of type {@link fr.inria.diverse.networkModelTest.nodeB}.
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Binding#getNodeA <em>Node A</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Node A</em>' containment reference.
+   * @see #getNodeA()
+   * @generated
+   */
+  void setNodeA(NodeA value);
+
+  /**
+   * Returns the value of the '<em><b>Node B</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Node B</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Node B</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Node B</em>' containment reference list.
+   * @return the value of the '<em>Node B</em>' containment reference.
+   * @see #setNodeB(NodeB)
    * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getBinding_NodeB()
    * @model containment="true"
    * @generated
    */
-  EList<nodeB> getNodeB();
+  NodeB getNodeB();
+
+  /**
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Binding#getNodeB <em>Node B</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Node B</em>' containment reference.
+   * @see #getNodeB()
+   * @generated
+   */
+  void setNodeB(NodeB value);
+
+  /**
+   * Returns the value of the '<em><b>Link ID</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Link ID</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Link ID</em>' attribute.
+   * @see #setLinkID(String)
+   * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getBinding_LinkID()
+   * @model
+   * @generated
+   */
+  String getLinkID();
+
+  /**
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Binding#getLinkID <em>Link ID</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Link ID</em>' attribute.
+   * @see #getLinkID()
+   * @generated
+   */
+  void setLinkID(String value);
 
 } // Binding

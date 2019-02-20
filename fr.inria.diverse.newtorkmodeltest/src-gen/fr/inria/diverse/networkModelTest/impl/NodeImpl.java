@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.networkModelTest.impl.NodeImpl#getNodetype <em>Nodetype</em>}</li>
- *   <li>{@link fr.inria.diverse.networkModelTest.impl.NodeImpl#getNode <em>Node</em>}</li>
+ *   <li>{@link fr.inria.diverse.networkModelTest.impl.NodeImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.impl.NodeImpl#getImage <em>Image</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.impl.NodeImpl#getNodeName <em>Node Name</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.impl.NodeImpl#getNodeID <em>Node ID</em>}</li>
@@ -47,24 +47,24 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
   protected NodeType nodetype;
 
   /**
-   * The default value of the '{@link #getNode() <em>Node</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNode()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String NODE_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNode() <em>Node</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNode()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String node = NODE_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getImage() <em>Image</em>}' attribute.
@@ -223,9 +223,9 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @generated
    */
   @Override
-  public String getNode()
+  public String getName()
   {
-    return node;
+    return name;
   }
 
   /**
@@ -234,12 +234,12 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
    * @generated
    */
   @Override
-  public void setNode(String newNode)
+  public void setName(String newName)
   {
-    String oldNode = node;
-    node = newNode;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.NODE__NODE, oldNode, node));
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.NODE__NAME, oldName, name));
   }
 
   /**
@@ -370,8 +370,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case NetworkModelTestPackage.NODE__NODETYPE:
         return getNodetype();
-      case NetworkModelTestPackage.NODE__NODE:
-        return getNode();
+      case NetworkModelTestPackage.NODE__NAME:
+        return getName();
       case NetworkModelTestPackage.NODE__IMAGE:
         return getImage();
       case NetworkModelTestPackage.NODE__NODE_NAME:
@@ -397,8 +397,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
       case NetworkModelTestPackage.NODE__NODETYPE:
         setNodetype((NodeType)newValue);
         return;
-      case NetworkModelTestPackage.NODE__NODE:
-        setNode((String)newValue);
+      case NetworkModelTestPackage.NODE__NAME:
+        setName((String)newValue);
         return;
       case NetworkModelTestPackage.NODE__IMAGE:
         setImage((String)newValue);
@@ -429,8 +429,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
       case NetworkModelTestPackage.NODE__NODETYPE:
         setNodetype((NodeType)null);
         return;
-      case NetworkModelTestPackage.NODE__NODE:
-        setNode(NODE_EDEFAULT);
+      case NetworkModelTestPackage.NODE__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case NetworkModelTestPackage.NODE__IMAGE:
         setImage(IMAGE_EDEFAULT);
@@ -460,8 +460,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     {
       case NetworkModelTestPackage.NODE__NODETYPE:
         return nodetype != null;
-      case NetworkModelTestPackage.NODE__NODE:
-        return NODE_EDEFAULT == null ? node != null : !NODE_EDEFAULT.equals(node);
+      case NetworkModelTestPackage.NODE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case NetworkModelTestPackage.NODE__IMAGE:
         return IMAGE_EDEFAULT == null ? image != null : !IMAGE_EDEFAULT.equals(image);
       case NetworkModelTestPackage.NODE__NODE_NAME:
@@ -485,8 +485,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (node: ");
-    result.append(node);
+    result.append(" (name: ");
+    result.append(name);
     result.append(", image: ");
     result.append(image);
     result.append(", nodeName: ");

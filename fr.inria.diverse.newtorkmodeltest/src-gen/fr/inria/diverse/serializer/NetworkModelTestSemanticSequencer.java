@@ -8,13 +8,14 @@ import fr.inria.diverse.networkModelTest.Binding;
 import fr.inria.diverse.networkModelTest.Config;
 import fr.inria.diverse.networkModelTest.DataType;
 import fr.inria.diverse.networkModelTest.Import;
+import fr.inria.diverse.networkModelTest.LinkID;
 import fr.inria.diverse.networkModelTest.Model;
 import fr.inria.diverse.networkModelTest.NetworkModelTestPackage;
 import fr.inria.diverse.networkModelTest.Node;
+import fr.inria.diverse.networkModelTest.NodeA;
+import fr.inria.diverse.networkModelTest.NodeB;
 import fr.inria.diverse.networkModelTest.NodeType;
 import fr.inria.diverse.networkModelTest.PackageDeclaration;
-import fr.inria.diverse.networkModelTest.nodeA;
-import fr.inria.diverse.networkModelTest.nodeB;
 import fr.inria.diverse.services.NetworkModelTestGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -53,23 +54,26 @@ public class NetworkModelTestSemanticSequencer extends AbstractDelegatingSemanti
 			case NetworkModelTestPackage.IMPORT:
 				sequence_Import(context, (Import) semanticObject); 
 				return; 
+			case NetworkModelTestPackage.LINK_ID:
+				sequence_LinkID(context, (LinkID) semanticObject); 
+				return; 
 			case NetworkModelTestPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
 				return; 
 			case NetworkModelTestPackage.NODE:
 				sequence_Node(context, (Node) semanticObject); 
 				return; 
+			case NetworkModelTestPackage.NODE_A:
+				sequence_NodeA(context, (NodeA) semanticObject); 
+				return; 
+			case NetworkModelTestPackage.NODE_B:
+				sequence_NodeB(context, (NodeB) semanticObject); 
+				return; 
 			case NetworkModelTestPackage.NODE_TYPE:
 				sequence_NodeType(context, (NodeType) semanticObject); 
 				return; 
 			case NetworkModelTestPackage.PACKAGE_DECLARATION:
 				sequence_PackageDeclaration(context, (PackageDeclaration) semanticObject); 
-				return; 
-			case NetworkModelTestPackage.NODE_A:
-				sequence_nodeA(context, (nodeA) semanticObject); 
-				return; 
-			case NetworkModelTestPackage.NODE_B:
-				sequence_nodeB(context, (nodeB) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -81,10 +85,22 @@ public class NetworkModelTestSemanticSequencer extends AbstractDelegatingSemanti
 	 *     Binding returns Binding
 	 *
 	 * Constraint:
-	 *     (nodeA+=nodeA nodeB+=nodeB)
+	 *     (nodeA=NodeA nodeB=NodeB linkID=STRING)
 	 */
 	protected void sequence_Binding(ISerializationContext context, Binding semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.BINDING__NODE_A) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.BINDING__NODE_A));
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.BINDING__NODE_B) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.BINDING__NODE_B));
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.BINDING__LINK_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.BINDING__LINK_ID));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getBindingAccess().getNodeANodeAParserRuleCall_1_0(), semanticObject.getNodeA());
+		feeder.accept(grammarAccess.getBindingAccess().getNodeBNodeBParserRuleCall_3_0(), semanticObject.getNodeB());
+		feeder.accept(grammarAccess.getBindingAccess().getLinkIDSTRINGTerminalRuleCall_6_0(), semanticObject.getLinkID());
+		feeder.finish();
 	}
 	
 	
@@ -143,6 +159,24 @@ public class NetworkModelTestSemanticSequencer extends AbstractDelegatingSemanti
 	
 	/**
 	 * Contexts:
+	 *     LinkID returns LinkID
+	 *
+	 * Constraint:
+	 *     linkID=STRING
+	 */
+	protected void sequence_LinkID(ISerializationContext context, LinkID semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.LINK_ID__LINK_ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.LINK_ID__LINK_ID));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLinkIDAccess().getLinkIDSTRINGTerminalRuleCall_0(), semanticObject.getLinkID());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Model returns Model
 	 *
 	 * Constraint:
@@ -150,6 +184,48 @@ public class NetworkModelTestSemanticSequencer extends AbstractDelegatingSemanti
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     NodeA returns NodeA
+	 *
+	 * Constraint:
+	 *     (name=ID eth=ID)
+	 */
+	protected void sequence_NodeA(ISerializationContext context, NodeA semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_A__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_A__NAME));
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_A__ETH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_A__ETH));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNodeAAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getNodeAAccess().getEthIDTerminalRuleCall_2_0(), semanticObject.getEth());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     NodeB returns NodeB
+	 *
+	 * Constraint:
+	 *     (name=ID eth=ID)
+	 */
+	protected void sequence_NodeB(ISerializationContext context, NodeB semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_B__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_B__NAME));
+			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_B__ETH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_B__ETH));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getNodeBAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getNodeBAccess().getEthIDTerminalRuleCall_2_0(), semanticObject.getEth());
+		feeder.finish();
 	}
 	
 	
@@ -180,7 +256,7 @@ public class NetworkModelTestSemanticSequencer extends AbstractDelegatingSemanti
 	 * Constraint:
 	 *     (
 	 *         nodetype=NodeType 
-	 *         node=ID 
+	 *         name=ID 
 	 *         image=STRING? 
 	 *         nodeName=STRING 
 	 *         nodeID=STRING 
@@ -202,48 +278,6 @@ public class NetworkModelTestSemanticSequencer extends AbstractDelegatingSemanti
 	 */
 	protected void sequence_PackageDeclaration(ISerializationContext context, PackageDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     nodeA returns nodeA
-	 *
-	 * Constraint:
-	 *     (node=ID eth=ID)
-	 */
-	protected void sequence_nodeA(ISerializationContext context, nodeA semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_A__NODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_A__NODE));
-			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_A__ETH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_A__ETH));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNodeAAccess().getNodeIDTerminalRuleCall_0_0(), semanticObject.getNode());
-		feeder.accept(grammarAccess.getNodeAAccess().getEthIDTerminalRuleCall_2_0(), semanticObject.getEth());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     nodeB returns nodeB
-	 *
-	 * Constraint:
-	 *     (node=ID eth=ID)
-	 */
-	protected void sequence_nodeB(ISerializationContext context, nodeB semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_B__NODE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_B__NODE));
-			if (transientValues.isValueTransient(semanticObject, NetworkModelTestPackage.Literals.NODE_B__ETH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, NetworkModelTestPackage.Literals.NODE_B__ETH));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getNodeBAccess().getNodeIDTerminalRuleCall_0_0(), semanticObject.getNode());
-		feeder.accept(grammarAccess.getNodeBAccess().getEthIDTerminalRuleCall_2_0(), semanticObject.getEth());
-		feeder.finish();
 	}
 	
 	

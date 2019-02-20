@@ -5,22 +5,17 @@ package fr.inria.diverse.networkModelTest.impl;
 
 import fr.inria.diverse.networkModelTest.Binding;
 import fr.inria.diverse.networkModelTest.NetworkModelTestPackage;
-import fr.inria.diverse.networkModelTest.nodeA;
-import fr.inria.diverse.networkModelTest.nodeB;
+import fr.inria.diverse.networkModelTest.NodeA;
+import fr.inria.diverse.networkModelTest.NodeB;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,6 +27,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link fr.inria.diverse.networkModelTest.impl.BindingImpl#getNodeA <em>Node A</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.impl.BindingImpl#getNodeB <em>Node B</em>}</li>
+ *   <li>{@link fr.inria.diverse.networkModelTest.impl.BindingImpl#getLinkID <em>Link ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,24 +35,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
 {
   /**
-   * The cached value of the '{@link #getNodeA() <em>Node A</em>}' containment reference list.
+   * The cached value of the '{@link #getNodeA() <em>Node A</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNodeA()
    * @generated
    * @ordered
    */
-  protected EList<nodeA> nodeA;
+  protected NodeA nodeA;
 
   /**
-   * The cached value of the '{@link #getNodeB() <em>Node B</em>}' containment reference list.
+   * The cached value of the '{@link #getNodeB() <em>Node B</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNodeB()
    * @generated
    * @ordered
    */
-  protected EList<nodeB> nodeB;
+  protected NodeB nodeB;
+
+  /**
+   * The default value of the '{@link #getLinkID() <em>Link ID</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLinkID()
+   * @generated
+   * @ordered
+   */
+  protected static final String LINK_ID_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getLinkID() <em>Link ID</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLinkID()
+   * @generated
+   * @ordered
+   */
+  protected String linkID = LINK_ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -85,12 +101,8 @@ public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
    * @generated
    */
   @Override
-  public EList<nodeA> getNodeA()
+  public NodeA getNodeA()
   {
-    if (nodeA == null)
-    {
-      nodeA = new EObjectContainmentEList<nodeA>(nodeA.class, this, NetworkModelTestPackage.BINDING__NODE_A);
-    }
     return nodeA;
   }
 
@@ -99,14 +111,113 @@ public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public EList<nodeB> getNodeB()
+  public NotificationChain basicSetNodeA(NodeA newNodeA, NotificationChain msgs)
   {
-    if (nodeB == null)
+    NodeA oldNodeA = nodeA;
+    nodeA = newNodeA;
+    if (eNotificationRequired())
     {
-      nodeB = new EObjectContainmentEList<nodeB>(nodeB.class, this, NetworkModelTestPackage.BINDING__NODE_B);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.BINDING__NODE_A, oldNodeA, newNodeA);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setNodeA(NodeA newNodeA)
+  {
+    if (newNodeA != nodeA)
+    {
+      NotificationChain msgs = null;
+      if (nodeA != null)
+        msgs = ((InternalEObject)nodeA).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - NetworkModelTestPackage.BINDING__NODE_A, null, msgs);
+      if (newNodeA != null)
+        msgs = ((InternalEObject)newNodeA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - NetworkModelTestPackage.BINDING__NODE_A, null, msgs);
+      msgs = basicSetNodeA(newNodeA, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.BINDING__NODE_A, newNodeA, newNodeA));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NodeB getNodeB()
+  {
     return nodeB;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetNodeB(NodeB newNodeB, NotificationChain msgs)
+  {
+    NodeB oldNodeB = nodeB;
+    nodeB = newNodeB;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.BINDING__NODE_B, oldNodeB, newNodeB);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setNodeB(NodeB newNodeB)
+  {
+    if (newNodeB != nodeB)
+    {
+      NotificationChain msgs = null;
+      if (nodeB != null)
+        msgs = ((InternalEObject)nodeB).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - NetworkModelTestPackage.BINDING__NODE_B, null, msgs);
+      if (newNodeB != null)
+        msgs = ((InternalEObject)newNodeB).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - NetworkModelTestPackage.BINDING__NODE_B, null, msgs);
+      msgs = basicSetNodeB(newNodeB, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.BINDING__NODE_B, newNodeB, newNodeB));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getLinkID()
+  {
+    return linkID;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setLinkID(String newLinkID)
+  {
+    String oldLinkID = linkID;
+    linkID = newLinkID;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, NetworkModelTestPackage.BINDING__LINK_ID, oldLinkID, linkID));
   }
 
   /**
@@ -120,9 +231,9 @@ public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
     switch (featureID)
     {
       case NetworkModelTestPackage.BINDING__NODE_A:
-        return ((InternalEList<?>)getNodeA()).basicRemove(otherEnd, msgs);
+        return basicSetNodeA(null, msgs);
       case NetworkModelTestPackage.BINDING__NODE_B:
-        return ((InternalEList<?>)getNodeB()).basicRemove(otherEnd, msgs);
+        return basicSetNodeB(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -141,6 +252,8 @@ public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
         return getNodeA();
       case NetworkModelTestPackage.BINDING__NODE_B:
         return getNodeB();
+      case NetworkModelTestPackage.BINDING__LINK_ID:
+        return getLinkID();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,19 +263,19 @@ public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case NetworkModelTestPackage.BINDING__NODE_A:
-        getNodeA().clear();
-        getNodeA().addAll((Collection<? extends nodeA>)newValue);
+        setNodeA((NodeA)newValue);
         return;
       case NetworkModelTestPackage.BINDING__NODE_B:
-        getNodeB().clear();
-        getNodeB().addAll((Collection<? extends nodeB>)newValue);
+        setNodeB((NodeB)newValue);
+        return;
+      case NetworkModelTestPackage.BINDING__LINK_ID:
+        setLinkID((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -179,10 +292,13 @@ public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
     switch (featureID)
     {
       case NetworkModelTestPackage.BINDING__NODE_A:
-        getNodeA().clear();
+        setNodeA((NodeA)null);
         return;
       case NetworkModelTestPackage.BINDING__NODE_B:
-        getNodeB().clear();
+        setNodeB((NodeB)null);
+        return;
+      case NetworkModelTestPackage.BINDING__LINK_ID:
+        setLinkID(LINK_ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -199,11 +315,30 @@ public class BindingImpl extends MinimalEObjectImpl.Container implements Binding
     switch (featureID)
     {
       case NetworkModelTestPackage.BINDING__NODE_A:
-        return nodeA != null && !nodeA.isEmpty();
+        return nodeA != null;
       case NetworkModelTestPackage.BINDING__NODE_B:
-        return nodeB != null && !nodeB.isEmpty();
+        return nodeB != null;
+      case NetworkModelTestPackage.BINDING__LINK_ID:
+        return LINK_ID_EDEFAULT == null ? linkID != null : !LINK_ID_EDEFAULT.equals(linkID);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (linkID: ");
+    result.append(linkID);
+    result.append(')');
+    return result.toString();
   }
 
 } //BindingImpl

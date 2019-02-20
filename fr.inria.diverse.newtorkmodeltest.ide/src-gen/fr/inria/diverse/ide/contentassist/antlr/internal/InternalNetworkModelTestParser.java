@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalNetworkModelTestParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Docker'", "'OVS'", "'EthSwitch'", "'Firefox'", "'UbuntuDesktop'", "'NAT'", "'Cloud'", "'package'", "'{'", "'}'", "'.'", "'import'", "'.*'", "'datatype'", "'config'", "'extends'", "'name:'", "'nodeID:'", "'image:'", "'eth0.IP:'", "'bind'", "'with'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Docker'", "'OVS'", "'EthSwitch'", "'Firefox'", "'UbuntuDesktop'", "'NAT'", "'Cloud'", "'package'", "'{'", "'}'", "'.'", "'import'", "'.*'", "'datatype'", "'config'", "'extends'", "'name:'", "'nodeID:'", "'image:'", "'eth0.IP:'", "'bind'", "'and'", "'with'", "'linkID:'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -32,7 +32,9 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__11=11;
+    public static final int T__33=33;
     public static final int T__12=12;
+    public static final int T__34=34;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
@@ -1032,16 +1034,16 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
     // $ANTLR end "ruleBinding"
 
 
-    // $ANTLR start "entryRulenodeA"
-    // InternalNetworkModelTest.g:353:1: entryRulenodeA : rulenodeA EOF ;
-    public final void entryRulenodeA() throws RecognitionException {
+    // $ANTLR start "entryRuleNodeA"
+    // InternalNetworkModelTest.g:353:1: entryRuleNodeA : ruleNodeA EOF ;
+    public final void entryRuleNodeA() throws RecognitionException {
         try {
-            // InternalNetworkModelTest.g:354:1: ( rulenodeA EOF )
-            // InternalNetworkModelTest.g:355:1: rulenodeA EOF
+            // InternalNetworkModelTest.g:354:1: ( ruleNodeA EOF )
+            // InternalNetworkModelTest.g:355:1: ruleNodeA EOF
             {
              before(grammarAccess.getNodeARule()); 
             pushFollow(FOLLOW_1);
-            rulenodeA();
+            ruleNodeA();
 
             state._fsp--;
 
@@ -1059,12 +1061,12 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "entryRulenodeA"
+    // $ANTLR end "entryRuleNodeA"
 
 
-    // $ANTLR start "rulenodeA"
-    // InternalNetworkModelTest.g:362:1: rulenodeA : ( ( rule__NodeA__Group__0 ) ) ;
-    public final void rulenodeA() throws RecognitionException {
+    // $ANTLR start "ruleNodeA"
+    // InternalNetworkModelTest.g:362:1: ruleNodeA : ( ( rule__NodeA__Group__0 ) ) ;
+    public final void ruleNodeA() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1106,19 +1108,19 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "rulenodeA"
+    // $ANTLR end "ruleNodeA"
 
 
-    // $ANTLR start "entryRulenodeB"
-    // InternalNetworkModelTest.g:378:1: entryRulenodeB : rulenodeB EOF ;
-    public final void entryRulenodeB() throws RecognitionException {
+    // $ANTLR start "entryRuleNodeB"
+    // InternalNetworkModelTest.g:378:1: entryRuleNodeB : ruleNodeB EOF ;
+    public final void entryRuleNodeB() throws RecognitionException {
         try {
-            // InternalNetworkModelTest.g:379:1: ( rulenodeB EOF )
-            // InternalNetworkModelTest.g:380:1: rulenodeB EOF
+            // InternalNetworkModelTest.g:379:1: ( ruleNodeB EOF )
+            // InternalNetworkModelTest.g:380:1: ruleNodeB EOF
             {
              before(grammarAccess.getNodeBRule()); 
             pushFollow(FOLLOW_1);
-            rulenodeB();
+            ruleNodeB();
 
             state._fsp--;
 
@@ -1136,12 +1138,12 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "entryRulenodeB"
+    // $ANTLR end "entryRuleNodeB"
 
 
-    // $ANTLR start "rulenodeB"
-    // InternalNetworkModelTest.g:387:1: rulenodeB : ( ( rule__NodeB__Group__0 ) ) ;
-    public final void rulenodeB() throws RecognitionException {
+    // $ANTLR start "ruleNodeB"
+    // InternalNetworkModelTest.g:387:1: ruleNodeB : ( ( rule__NodeB__Group__0 ) ) ;
+    public final void ruleNodeB() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1183,7 +1185,7 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "rulenodeB"
+    // $ANTLR end "ruleNodeB"
 
 
     // $ANTLR start "rule__NodeElement__Alternatives"
@@ -3686,31 +3688,31 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Node__Group__1__Impl"
-    // InternalNetworkModelTest.g:1202:1: rule__Node__Group__1__Impl : ( ( rule__Node__NodeAssignment_1 ) ) ;
+    // InternalNetworkModelTest.g:1202:1: rule__Node__Group__1__Impl : ( ( rule__Node__NameAssignment_1 ) ) ;
     public final void rule__Node__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1206:1: ( ( ( rule__Node__NodeAssignment_1 ) ) )
-            // InternalNetworkModelTest.g:1207:1: ( ( rule__Node__NodeAssignment_1 ) )
+            // InternalNetworkModelTest.g:1206:1: ( ( ( rule__Node__NameAssignment_1 ) ) )
+            // InternalNetworkModelTest.g:1207:1: ( ( rule__Node__NameAssignment_1 ) )
             {
-            // InternalNetworkModelTest.g:1207:1: ( ( rule__Node__NodeAssignment_1 ) )
-            // InternalNetworkModelTest.g:1208:2: ( rule__Node__NodeAssignment_1 )
+            // InternalNetworkModelTest.g:1207:1: ( ( rule__Node__NameAssignment_1 ) )
+            // InternalNetworkModelTest.g:1208:2: ( rule__Node__NameAssignment_1 )
             {
-             before(grammarAccess.getNodeAccess().getNodeAssignment_1()); 
-            // InternalNetworkModelTest.g:1209:2: ( rule__Node__NodeAssignment_1 )
-            // InternalNetworkModelTest.g:1209:3: rule__Node__NodeAssignment_1
+             before(grammarAccess.getNodeAccess().getNameAssignment_1()); 
+            // InternalNetworkModelTest.g:1209:2: ( rule__Node__NameAssignment_1 )
+            // InternalNetworkModelTest.g:1209:3: rule__Node__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Node__NodeAssignment_1();
+            rule__Node__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getNodeAccess().getNodeAssignment_1()); 
+             after(grammarAccess.getNodeAccess().getNameAssignment_1()); 
 
             }
 
@@ -4898,21 +4900,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Binding__Group__2__Impl"
-    // InternalNetworkModelTest.g:1607:1: rule__Binding__Group__2__Impl : ( 'with' ) ;
+    // InternalNetworkModelTest.g:1607:1: rule__Binding__Group__2__Impl : ( 'and' ) ;
     public final void rule__Binding__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1611:1: ( ( 'with' ) )
-            // InternalNetworkModelTest.g:1612:1: ( 'with' )
+            // InternalNetworkModelTest.g:1611:1: ( ( 'and' ) )
+            // InternalNetworkModelTest.g:1612:1: ( 'and' )
             {
-            // InternalNetworkModelTest.g:1612:1: ( 'with' )
-            // InternalNetworkModelTest.g:1613:2: 'with'
+            // InternalNetworkModelTest.g:1612:1: ( 'and' )
+            // InternalNetworkModelTest.g:1613:2: 'and'
             {
-             before(grammarAccess.getBindingAccess().getWithKeyword_2()); 
+             before(grammarAccess.getBindingAccess().getAndKeyword_2()); 
             match(input,32,FOLLOW_2); 
-             after(grammarAccess.getBindingAccess().getWithKeyword_2()); 
+             after(grammarAccess.getBindingAccess().getAndKeyword_2()); 
 
             }
 
@@ -4935,17 +4937,22 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Binding__Group__3"
-    // InternalNetworkModelTest.g:1622:1: rule__Binding__Group__3 : rule__Binding__Group__3__Impl ;
+    // InternalNetworkModelTest.g:1622:1: rule__Binding__Group__3 : rule__Binding__Group__3__Impl rule__Binding__Group__4 ;
     public final void rule__Binding__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1626:1: ( rule__Binding__Group__3__Impl )
-            // InternalNetworkModelTest.g:1627:2: rule__Binding__Group__3__Impl
+            // InternalNetworkModelTest.g:1626:1: ( rule__Binding__Group__3__Impl rule__Binding__Group__4 )
+            // InternalNetworkModelTest.g:1627:2: rule__Binding__Group__3__Impl rule__Binding__Group__4
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_21);
             rule__Binding__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Binding__Group__4();
 
             state._fsp--;
 
@@ -4968,21 +4975,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Binding__Group__3__Impl"
-    // InternalNetworkModelTest.g:1633:1: rule__Binding__Group__3__Impl : ( ( rule__Binding__NodeBAssignment_3 ) ) ;
+    // InternalNetworkModelTest.g:1634:1: rule__Binding__Group__3__Impl : ( ( rule__Binding__NodeBAssignment_3 ) ) ;
     public final void rule__Binding__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1637:1: ( ( ( rule__Binding__NodeBAssignment_3 ) ) )
-            // InternalNetworkModelTest.g:1638:1: ( ( rule__Binding__NodeBAssignment_3 ) )
+            // InternalNetworkModelTest.g:1638:1: ( ( ( rule__Binding__NodeBAssignment_3 ) ) )
+            // InternalNetworkModelTest.g:1639:1: ( ( rule__Binding__NodeBAssignment_3 ) )
             {
-            // InternalNetworkModelTest.g:1638:1: ( ( rule__Binding__NodeBAssignment_3 ) )
-            // InternalNetworkModelTest.g:1639:2: ( rule__Binding__NodeBAssignment_3 )
+            // InternalNetworkModelTest.g:1639:1: ( ( rule__Binding__NodeBAssignment_3 ) )
+            // InternalNetworkModelTest.g:1640:2: ( rule__Binding__NodeBAssignment_3 )
             {
              before(grammarAccess.getBindingAccess().getNodeBAssignment_3()); 
-            // InternalNetworkModelTest.g:1640:2: ( rule__Binding__NodeBAssignment_3 )
-            // InternalNetworkModelTest.g:1640:3: rule__Binding__NodeBAssignment_3
+            // InternalNetworkModelTest.g:1641:2: ( rule__Binding__NodeBAssignment_3 )
+            // InternalNetworkModelTest.g:1641:3: rule__Binding__NodeBAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__Binding__NodeBAssignment_3();
@@ -5014,15 +5021,245 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
     // $ANTLR end "rule__Binding__Group__3__Impl"
 
 
+    // $ANTLR start "rule__Binding__Group__4"
+    // InternalNetworkModelTest.g:1649:1: rule__Binding__Group__4 : rule__Binding__Group__4__Impl rule__Binding__Group__5 ;
+    public final void rule__Binding__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalNetworkModelTest.g:1653:1: ( rule__Binding__Group__4__Impl rule__Binding__Group__5 )
+            // InternalNetworkModelTest.g:1654:2: rule__Binding__Group__4__Impl rule__Binding__Group__5
+            {
+            pushFollow(FOLLOW_22);
+            rule__Binding__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Binding__Group__5();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Binding__Group__4"
+
+
+    // $ANTLR start "rule__Binding__Group__4__Impl"
+    // InternalNetworkModelTest.g:1661:1: rule__Binding__Group__4__Impl : ( 'with' ) ;
+    public final void rule__Binding__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalNetworkModelTest.g:1665:1: ( ( 'with' ) )
+            // InternalNetworkModelTest.g:1666:1: ( 'with' )
+            {
+            // InternalNetworkModelTest.g:1666:1: ( 'with' )
+            // InternalNetworkModelTest.g:1667:2: 'with'
+            {
+             before(grammarAccess.getBindingAccess().getWithKeyword_4()); 
+            match(input,33,FOLLOW_2); 
+             after(grammarAccess.getBindingAccess().getWithKeyword_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Binding__Group__4__Impl"
+
+
+    // $ANTLR start "rule__Binding__Group__5"
+    // InternalNetworkModelTest.g:1676:1: rule__Binding__Group__5 : rule__Binding__Group__5__Impl rule__Binding__Group__6 ;
+    public final void rule__Binding__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalNetworkModelTest.g:1680:1: ( rule__Binding__Group__5__Impl rule__Binding__Group__6 )
+            // InternalNetworkModelTest.g:1681:2: rule__Binding__Group__5__Impl rule__Binding__Group__6
+            {
+            pushFollow(FOLLOW_17);
+            rule__Binding__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Binding__Group__6();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Binding__Group__5"
+
+
+    // $ANTLR start "rule__Binding__Group__5__Impl"
+    // InternalNetworkModelTest.g:1688:1: rule__Binding__Group__5__Impl : ( 'linkID:' ) ;
+    public final void rule__Binding__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalNetworkModelTest.g:1692:1: ( ( 'linkID:' ) )
+            // InternalNetworkModelTest.g:1693:1: ( 'linkID:' )
+            {
+            // InternalNetworkModelTest.g:1693:1: ( 'linkID:' )
+            // InternalNetworkModelTest.g:1694:2: 'linkID:'
+            {
+             before(grammarAccess.getBindingAccess().getLinkIDKeyword_5()); 
+            match(input,34,FOLLOW_2); 
+             after(grammarAccess.getBindingAccess().getLinkIDKeyword_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Binding__Group__5__Impl"
+
+
+    // $ANTLR start "rule__Binding__Group__6"
+    // InternalNetworkModelTest.g:1703:1: rule__Binding__Group__6 : rule__Binding__Group__6__Impl ;
+    public final void rule__Binding__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalNetworkModelTest.g:1707:1: ( rule__Binding__Group__6__Impl )
+            // InternalNetworkModelTest.g:1708:2: rule__Binding__Group__6__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Binding__Group__6__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Binding__Group__6"
+
+
+    // $ANTLR start "rule__Binding__Group__6__Impl"
+    // InternalNetworkModelTest.g:1714:1: rule__Binding__Group__6__Impl : ( ( rule__Binding__LinkIDAssignment_6 ) ) ;
+    public final void rule__Binding__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalNetworkModelTest.g:1718:1: ( ( ( rule__Binding__LinkIDAssignment_6 ) ) )
+            // InternalNetworkModelTest.g:1719:1: ( ( rule__Binding__LinkIDAssignment_6 ) )
+            {
+            // InternalNetworkModelTest.g:1719:1: ( ( rule__Binding__LinkIDAssignment_6 ) )
+            // InternalNetworkModelTest.g:1720:2: ( rule__Binding__LinkIDAssignment_6 )
+            {
+             before(grammarAccess.getBindingAccess().getLinkIDAssignment_6()); 
+            // InternalNetworkModelTest.g:1721:2: ( rule__Binding__LinkIDAssignment_6 )
+            // InternalNetworkModelTest.g:1721:3: rule__Binding__LinkIDAssignment_6
+            {
+            pushFollow(FOLLOW_2);
+            rule__Binding__LinkIDAssignment_6();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBindingAccess().getLinkIDAssignment_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Binding__Group__6__Impl"
+
+
     // $ANTLR start "rule__NodeA__Group__0"
-    // InternalNetworkModelTest.g:1649:1: rule__NodeA__Group__0 : rule__NodeA__Group__0__Impl rule__NodeA__Group__1 ;
+    // InternalNetworkModelTest.g:1730:1: rule__NodeA__Group__0 : rule__NodeA__Group__0__Impl rule__NodeA__Group__1 ;
     public final void rule__NodeA__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1653:1: ( rule__NodeA__Group__0__Impl rule__NodeA__Group__1 )
-            // InternalNetworkModelTest.g:1654:2: rule__NodeA__Group__0__Impl rule__NodeA__Group__1
+            // InternalNetworkModelTest.g:1734:1: ( rule__NodeA__Group__0__Impl rule__NodeA__Group__1 )
+            // InternalNetworkModelTest.g:1735:2: rule__NodeA__Group__0__Impl rule__NodeA__Group__1
             {
             pushFollow(FOLLOW_7);
             rule__NodeA__Group__0__Impl();
@@ -5053,31 +5290,31 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeA__Group__0__Impl"
-    // InternalNetworkModelTest.g:1661:1: rule__NodeA__Group__0__Impl : ( ( rule__NodeA__NodeAssignment_0 ) ) ;
+    // InternalNetworkModelTest.g:1742:1: rule__NodeA__Group__0__Impl : ( ( rule__NodeA__NameAssignment_0 ) ) ;
     public final void rule__NodeA__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1665:1: ( ( ( rule__NodeA__NodeAssignment_0 ) ) )
-            // InternalNetworkModelTest.g:1666:1: ( ( rule__NodeA__NodeAssignment_0 ) )
+            // InternalNetworkModelTest.g:1746:1: ( ( ( rule__NodeA__NameAssignment_0 ) ) )
+            // InternalNetworkModelTest.g:1747:1: ( ( rule__NodeA__NameAssignment_0 ) )
             {
-            // InternalNetworkModelTest.g:1666:1: ( ( rule__NodeA__NodeAssignment_0 ) )
-            // InternalNetworkModelTest.g:1667:2: ( rule__NodeA__NodeAssignment_0 )
+            // InternalNetworkModelTest.g:1747:1: ( ( rule__NodeA__NameAssignment_0 ) )
+            // InternalNetworkModelTest.g:1748:2: ( rule__NodeA__NameAssignment_0 )
             {
-             before(grammarAccess.getNodeAAccess().getNodeAssignment_0()); 
-            // InternalNetworkModelTest.g:1668:2: ( rule__NodeA__NodeAssignment_0 )
-            // InternalNetworkModelTest.g:1668:3: rule__NodeA__NodeAssignment_0
+             before(grammarAccess.getNodeAAccess().getNameAssignment_0()); 
+            // InternalNetworkModelTest.g:1749:2: ( rule__NodeA__NameAssignment_0 )
+            // InternalNetworkModelTest.g:1749:3: rule__NodeA__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__NodeA__NodeAssignment_0();
+            rule__NodeA__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getNodeAAccess().getNodeAssignment_0()); 
+             after(grammarAccess.getNodeAAccess().getNameAssignment_0()); 
 
             }
 
@@ -5100,14 +5337,14 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeA__Group__1"
-    // InternalNetworkModelTest.g:1676:1: rule__NodeA__Group__1 : rule__NodeA__Group__1__Impl rule__NodeA__Group__2 ;
+    // InternalNetworkModelTest.g:1757:1: rule__NodeA__Group__1 : rule__NodeA__Group__1__Impl rule__NodeA__Group__2 ;
     public final void rule__NodeA__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1680:1: ( rule__NodeA__Group__1__Impl rule__NodeA__Group__2 )
-            // InternalNetworkModelTest.g:1681:2: rule__NodeA__Group__1__Impl rule__NodeA__Group__2
+            // InternalNetworkModelTest.g:1761:1: ( rule__NodeA__Group__1__Impl rule__NodeA__Group__2 )
+            // InternalNetworkModelTest.g:1762:2: rule__NodeA__Group__1__Impl rule__NodeA__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__NodeA__Group__1__Impl();
@@ -5138,17 +5375,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeA__Group__1__Impl"
-    // InternalNetworkModelTest.g:1688:1: rule__NodeA__Group__1__Impl : ( '.' ) ;
+    // InternalNetworkModelTest.g:1769:1: rule__NodeA__Group__1__Impl : ( '.' ) ;
     public final void rule__NodeA__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1692:1: ( ( '.' ) )
-            // InternalNetworkModelTest.g:1693:1: ( '.' )
+            // InternalNetworkModelTest.g:1773:1: ( ( '.' ) )
+            // InternalNetworkModelTest.g:1774:1: ( '.' )
             {
-            // InternalNetworkModelTest.g:1693:1: ( '.' )
-            // InternalNetworkModelTest.g:1694:2: '.'
+            // InternalNetworkModelTest.g:1774:1: ( '.' )
+            // InternalNetworkModelTest.g:1775:2: '.'
             {
              before(grammarAccess.getNodeAAccess().getFullStopKeyword_1()); 
             match(input,21,FOLLOW_2); 
@@ -5175,14 +5412,14 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeA__Group__2"
-    // InternalNetworkModelTest.g:1703:1: rule__NodeA__Group__2 : rule__NodeA__Group__2__Impl ;
+    // InternalNetworkModelTest.g:1784:1: rule__NodeA__Group__2 : rule__NodeA__Group__2__Impl ;
     public final void rule__NodeA__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1707:1: ( rule__NodeA__Group__2__Impl )
-            // InternalNetworkModelTest.g:1708:2: rule__NodeA__Group__2__Impl
+            // InternalNetworkModelTest.g:1788:1: ( rule__NodeA__Group__2__Impl )
+            // InternalNetworkModelTest.g:1789:2: rule__NodeA__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__NodeA__Group__2__Impl();
@@ -5208,21 +5445,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeA__Group__2__Impl"
-    // InternalNetworkModelTest.g:1714:1: rule__NodeA__Group__2__Impl : ( ( rule__NodeA__EthAssignment_2 ) ) ;
+    // InternalNetworkModelTest.g:1795:1: rule__NodeA__Group__2__Impl : ( ( rule__NodeA__EthAssignment_2 ) ) ;
     public final void rule__NodeA__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1718:1: ( ( ( rule__NodeA__EthAssignment_2 ) ) )
-            // InternalNetworkModelTest.g:1719:1: ( ( rule__NodeA__EthAssignment_2 ) )
+            // InternalNetworkModelTest.g:1799:1: ( ( ( rule__NodeA__EthAssignment_2 ) ) )
+            // InternalNetworkModelTest.g:1800:1: ( ( rule__NodeA__EthAssignment_2 ) )
             {
-            // InternalNetworkModelTest.g:1719:1: ( ( rule__NodeA__EthAssignment_2 ) )
-            // InternalNetworkModelTest.g:1720:2: ( rule__NodeA__EthAssignment_2 )
+            // InternalNetworkModelTest.g:1800:1: ( ( rule__NodeA__EthAssignment_2 ) )
+            // InternalNetworkModelTest.g:1801:2: ( rule__NodeA__EthAssignment_2 )
             {
              before(grammarAccess.getNodeAAccess().getEthAssignment_2()); 
-            // InternalNetworkModelTest.g:1721:2: ( rule__NodeA__EthAssignment_2 )
-            // InternalNetworkModelTest.g:1721:3: rule__NodeA__EthAssignment_2
+            // InternalNetworkModelTest.g:1802:2: ( rule__NodeA__EthAssignment_2 )
+            // InternalNetworkModelTest.g:1802:3: rule__NodeA__EthAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__NodeA__EthAssignment_2();
@@ -5255,14 +5492,14 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeB__Group__0"
-    // InternalNetworkModelTest.g:1730:1: rule__NodeB__Group__0 : rule__NodeB__Group__0__Impl rule__NodeB__Group__1 ;
+    // InternalNetworkModelTest.g:1811:1: rule__NodeB__Group__0 : rule__NodeB__Group__0__Impl rule__NodeB__Group__1 ;
     public final void rule__NodeB__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1734:1: ( rule__NodeB__Group__0__Impl rule__NodeB__Group__1 )
-            // InternalNetworkModelTest.g:1735:2: rule__NodeB__Group__0__Impl rule__NodeB__Group__1
+            // InternalNetworkModelTest.g:1815:1: ( rule__NodeB__Group__0__Impl rule__NodeB__Group__1 )
+            // InternalNetworkModelTest.g:1816:2: rule__NodeB__Group__0__Impl rule__NodeB__Group__1
             {
             pushFollow(FOLLOW_7);
             rule__NodeB__Group__0__Impl();
@@ -5293,31 +5530,31 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeB__Group__0__Impl"
-    // InternalNetworkModelTest.g:1742:1: rule__NodeB__Group__0__Impl : ( ( rule__NodeB__NodeAssignment_0 ) ) ;
+    // InternalNetworkModelTest.g:1823:1: rule__NodeB__Group__0__Impl : ( ( rule__NodeB__NameAssignment_0 ) ) ;
     public final void rule__NodeB__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1746:1: ( ( ( rule__NodeB__NodeAssignment_0 ) ) )
-            // InternalNetworkModelTest.g:1747:1: ( ( rule__NodeB__NodeAssignment_0 ) )
+            // InternalNetworkModelTest.g:1827:1: ( ( ( rule__NodeB__NameAssignment_0 ) ) )
+            // InternalNetworkModelTest.g:1828:1: ( ( rule__NodeB__NameAssignment_0 ) )
             {
-            // InternalNetworkModelTest.g:1747:1: ( ( rule__NodeB__NodeAssignment_0 ) )
-            // InternalNetworkModelTest.g:1748:2: ( rule__NodeB__NodeAssignment_0 )
+            // InternalNetworkModelTest.g:1828:1: ( ( rule__NodeB__NameAssignment_0 ) )
+            // InternalNetworkModelTest.g:1829:2: ( rule__NodeB__NameAssignment_0 )
             {
-             before(grammarAccess.getNodeBAccess().getNodeAssignment_0()); 
-            // InternalNetworkModelTest.g:1749:2: ( rule__NodeB__NodeAssignment_0 )
-            // InternalNetworkModelTest.g:1749:3: rule__NodeB__NodeAssignment_0
+             before(grammarAccess.getNodeBAccess().getNameAssignment_0()); 
+            // InternalNetworkModelTest.g:1830:2: ( rule__NodeB__NameAssignment_0 )
+            // InternalNetworkModelTest.g:1830:3: rule__NodeB__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
-            rule__NodeB__NodeAssignment_0();
+            rule__NodeB__NameAssignment_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getNodeBAccess().getNodeAssignment_0()); 
+             after(grammarAccess.getNodeBAccess().getNameAssignment_0()); 
 
             }
 
@@ -5340,14 +5577,14 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeB__Group__1"
-    // InternalNetworkModelTest.g:1757:1: rule__NodeB__Group__1 : rule__NodeB__Group__1__Impl rule__NodeB__Group__2 ;
+    // InternalNetworkModelTest.g:1838:1: rule__NodeB__Group__1 : rule__NodeB__Group__1__Impl rule__NodeB__Group__2 ;
     public final void rule__NodeB__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1761:1: ( rule__NodeB__Group__1__Impl rule__NodeB__Group__2 )
-            // InternalNetworkModelTest.g:1762:2: rule__NodeB__Group__1__Impl rule__NodeB__Group__2
+            // InternalNetworkModelTest.g:1842:1: ( rule__NodeB__Group__1__Impl rule__NodeB__Group__2 )
+            // InternalNetworkModelTest.g:1843:2: rule__NodeB__Group__1__Impl rule__NodeB__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__NodeB__Group__1__Impl();
@@ -5378,17 +5615,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeB__Group__1__Impl"
-    // InternalNetworkModelTest.g:1769:1: rule__NodeB__Group__1__Impl : ( '.' ) ;
+    // InternalNetworkModelTest.g:1850:1: rule__NodeB__Group__1__Impl : ( '.' ) ;
     public final void rule__NodeB__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1773:1: ( ( '.' ) )
-            // InternalNetworkModelTest.g:1774:1: ( '.' )
+            // InternalNetworkModelTest.g:1854:1: ( ( '.' ) )
+            // InternalNetworkModelTest.g:1855:1: ( '.' )
             {
-            // InternalNetworkModelTest.g:1774:1: ( '.' )
-            // InternalNetworkModelTest.g:1775:2: '.'
+            // InternalNetworkModelTest.g:1855:1: ( '.' )
+            // InternalNetworkModelTest.g:1856:2: '.'
             {
              before(grammarAccess.getNodeBAccess().getFullStopKeyword_1()); 
             match(input,21,FOLLOW_2); 
@@ -5415,14 +5652,14 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeB__Group__2"
-    // InternalNetworkModelTest.g:1784:1: rule__NodeB__Group__2 : rule__NodeB__Group__2__Impl ;
+    // InternalNetworkModelTest.g:1865:1: rule__NodeB__Group__2 : rule__NodeB__Group__2__Impl ;
     public final void rule__NodeB__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1788:1: ( rule__NodeB__Group__2__Impl )
-            // InternalNetworkModelTest.g:1789:2: rule__NodeB__Group__2__Impl
+            // InternalNetworkModelTest.g:1869:1: ( rule__NodeB__Group__2__Impl )
+            // InternalNetworkModelTest.g:1870:2: rule__NodeB__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__NodeB__Group__2__Impl();
@@ -5448,21 +5685,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeB__Group__2__Impl"
-    // InternalNetworkModelTest.g:1795:1: rule__NodeB__Group__2__Impl : ( ( rule__NodeB__EthAssignment_2 ) ) ;
+    // InternalNetworkModelTest.g:1876:1: rule__NodeB__Group__2__Impl : ( ( rule__NodeB__EthAssignment_2 ) ) ;
     public final void rule__NodeB__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1799:1: ( ( ( rule__NodeB__EthAssignment_2 ) ) )
-            // InternalNetworkModelTest.g:1800:1: ( ( rule__NodeB__EthAssignment_2 ) )
+            // InternalNetworkModelTest.g:1880:1: ( ( ( rule__NodeB__EthAssignment_2 ) ) )
+            // InternalNetworkModelTest.g:1881:1: ( ( rule__NodeB__EthAssignment_2 ) )
             {
-            // InternalNetworkModelTest.g:1800:1: ( ( rule__NodeB__EthAssignment_2 ) )
-            // InternalNetworkModelTest.g:1801:2: ( rule__NodeB__EthAssignment_2 )
+            // InternalNetworkModelTest.g:1881:1: ( ( rule__NodeB__EthAssignment_2 ) )
+            // InternalNetworkModelTest.g:1882:2: ( rule__NodeB__EthAssignment_2 )
             {
              before(grammarAccess.getNodeBAccess().getEthAssignment_2()); 
-            // InternalNetworkModelTest.g:1802:2: ( rule__NodeB__EthAssignment_2 )
-            // InternalNetworkModelTest.g:1802:3: rule__NodeB__EthAssignment_2
+            // InternalNetworkModelTest.g:1883:2: ( rule__NodeB__EthAssignment_2 )
+            // InternalNetworkModelTest.g:1883:3: rule__NodeB__EthAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__NodeB__EthAssignment_2();
@@ -5495,17 +5732,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__ElementsAssignment"
-    // InternalNetworkModelTest.g:1811:1: rule__Model__ElementsAssignment : ( ruleNodeElement ) ;
+    // InternalNetworkModelTest.g:1892:1: rule__Model__ElementsAssignment : ( ruleNodeElement ) ;
     public final void rule__Model__ElementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1815:1: ( ( ruleNodeElement ) )
-            // InternalNetworkModelTest.g:1816:2: ( ruleNodeElement )
+            // InternalNetworkModelTest.g:1896:1: ( ( ruleNodeElement ) )
+            // InternalNetworkModelTest.g:1897:2: ( ruleNodeElement )
             {
-            // InternalNetworkModelTest.g:1816:2: ( ruleNodeElement )
-            // InternalNetworkModelTest.g:1817:3: ruleNodeElement
+            // InternalNetworkModelTest.g:1897:2: ( ruleNodeElement )
+            // InternalNetworkModelTest.g:1898:3: ruleNodeElement
             {
              before(grammarAccess.getModelAccess().getElementsNodeElementParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -5536,17 +5773,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__PackageDeclaration__NameAssignment_1"
-    // InternalNetworkModelTest.g:1826:1: rule__PackageDeclaration__NameAssignment_1 : ( ruleQualifiedName ) ;
+    // InternalNetworkModelTest.g:1907:1: rule__PackageDeclaration__NameAssignment_1 : ( ruleQualifiedName ) ;
     public final void rule__PackageDeclaration__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1830:1: ( ( ruleQualifiedName ) )
-            // InternalNetworkModelTest.g:1831:2: ( ruleQualifiedName )
+            // InternalNetworkModelTest.g:1911:1: ( ( ruleQualifiedName ) )
+            // InternalNetworkModelTest.g:1912:2: ( ruleQualifiedName )
             {
-            // InternalNetworkModelTest.g:1831:2: ( ruleQualifiedName )
-            // InternalNetworkModelTest.g:1832:3: ruleQualifiedName
+            // InternalNetworkModelTest.g:1912:2: ( ruleQualifiedName )
+            // InternalNetworkModelTest.g:1913:3: ruleQualifiedName
             {
              before(grammarAccess.getPackageDeclarationAccess().getNameQualifiedNameParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -5577,17 +5814,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__PackageDeclaration__ElementsAssignment_3"
-    // InternalNetworkModelTest.g:1841:1: rule__PackageDeclaration__ElementsAssignment_3 : ( ruleNodeElement ) ;
+    // InternalNetworkModelTest.g:1922:1: rule__PackageDeclaration__ElementsAssignment_3 : ( ruleNodeElement ) ;
     public final void rule__PackageDeclaration__ElementsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1845:1: ( ( ruleNodeElement ) )
-            // InternalNetworkModelTest.g:1846:2: ( ruleNodeElement )
+            // InternalNetworkModelTest.g:1926:1: ( ( ruleNodeElement ) )
+            // InternalNetworkModelTest.g:1927:2: ( ruleNodeElement )
             {
-            // InternalNetworkModelTest.g:1846:2: ( ruleNodeElement )
-            // InternalNetworkModelTest.g:1847:3: ruleNodeElement
+            // InternalNetworkModelTest.g:1927:2: ( ruleNodeElement )
+            // InternalNetworkModelTest.g:1928:3: ruleNodeElement
             {
              before(grammarAccess.getPackageDeclarationAccess().getElementsNodeElementParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -5618,17 +5855,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Import__ImportedNameSpaceAssignment_1"
-    // InternalNetworkModelTest.g:1856:1: rule__Import__ImportedNameSpaceAssignment_1 : ( ruleQualifiedNameWithWildcard ) ;
+    // InternalNetworkModelTest.g:1937:1: rule__Import__ImportedNameSpaceAssignment_1 : ( ruleQualifiedNameWithWildcard ) ;
     public final void rule__Import__ImportedNameSpaceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1860:1: ( ( ruleQualifiedNameWithWildcard ) )
-            // InternalNetworkModelTest.g:1861:2: ( ruleQualifiedNameWithWildcard )
+            // InternalNetworkModelTest.g:1941:1: ( ( ruleQualifiedNameWithWildcard ) )
+            // InternalNetworkModelTest.g:1942:2: ( ruleQualifiedNameWithWildcard )
             {
-            // InternalNetworkModelTest.g:1861:2: ( ruleQualifiedNameWithWildcard )
-            // InternalNetworkModelTest.g:1862:3: ruleQualifiedNameWithWildcard
+            // InternalNetworkModelTest.g:1942:2: ( ruleQualifiedNameWithWildcard )
+            // InternalNetworkModelTest.g:1943:3: ruleQualifiedNameWithWildcard
             {
              before(grammarAccess.getImportAccess().getImportedNameSpaceQualifiedNameWithWildcardParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -5659,17 +5896,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__DataType__NameAssignment_1"
-    // InternalNetworkModelTest.g:1871:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalNetworkModelTest.g:1952:1: rule__DataType__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DataType__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1875:1: ( ( RULE_ID ) )
-            // InternalNetworkModelTest.g:1876:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:1956:1: ( ( RULE_ID ) )
+            // InternalNetworkModelTest.g:1957:2: ( RULE_ID )
             {
-            // InternalNetworkModelTest.g:1876:2: ( RULE_ID )
-            // InternalNetworkModelTest.g:1877:3: RULE_ID
+            // InternalNetworkModelTest.g:1957:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:1958:3: RULE_ID
             {
              before(grammarAccess.getDataTypeAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -5696,17 +5933,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Config__NameAssignment_1"
-    // InternalNetworkModelTest.g:1886:1: rule__Config__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalNetworkModelTest.g:1967:1: rule__Config__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Config__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1890:1: ( ( RULE_ID ) )
-            // InternalNetworkModelTest.g:1891:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:1971:1: ( ( RULE_ID ) )
+            // InternalNetworkModelTest.g:1972:2: ( RULE_ID )
             {
-            // InternalNetworkModelTest.g:1891:2: ( RULE_ID )
-            // InternalNetworkModelTest.g:1892:3: RULE_ID
+            // InternalNetworkModelTest.g:1972:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:1973:3: RULE_ID
             {
              before(grammarAccess.getConfigAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -5733,21 +5970,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Config__SuperTypeAssignment_2_1"
-    // InternalNetworkModelTest.g:1901:1: rule__Config__SuperTypeAssignment_2_1 : ( ( ruleQualifiedName ) ) ;
+    // InternalNetworkModelTest.g:1982:1: rule__Config__SuperTypeAssignment_2_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Config__SuperTypeAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1905:1: ( ( ( ruleQualifiedName ) ) )
-            // InternalNetworkModelTest.g:1906:2: ( ( ruleQualifiedName ) )
+            // InternalNetworkModelTest.g:1986:1: ( ( ( ruleQualifiedName ) ) )
+            // InternalNetworkModelTest.g:1987:2: ( ( ruleQualifiedName ) )
             {
-            // InternalNetworkModelTest.g:1906:2: ( ( ruleQualifiedName ) )
-            // InternalNetworkModelTest.g:1907:3: ( ruleQualifiedName )
+            // InternalNetworkModelTest.g:1987:2: ( ( ruleQualifiedName ) )
+            // InternalNetworkModelTest.g:1988:3: ( ruleQualifiedName )
             {
              before(grammarAccess.getConfigAccess().getSuperTypeConfigCrossReference_2_1_0()); 
-            // InternalNetworkModelTest.g:1908:3: ( ruleQualifiedName )
-            // InternalNetworkModelTest.g:1909:4: ruleQualifiedName
+            // InternalNetworkModelTest.g:1989:3: ( ruleQualifiedName )
+            // InternalNetworkModelTest.g:1990:4: ruleQualifiedName
             {
              before(grammarAccess.getConfigAccess().getSuperTypeConfigQualifiedNameParserRuleCall_2_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -5782,17 +6019,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Config__NodeAssignment_4"
-    // InternalNetworkModelTest.g:1920:1: rule__Config__NodeAssignment_4 : ( ruleNode ) ;
+    // InternalNetworkModelTest.g:2001:1: rule__Config__NodeAssignment_4 : ( ruleNode ) ;
     public final void rule__Config__NodeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1924:1: ( ( ruleNode ) )
-            // InternalNetworkModelTest.g:1925:2: ( ruleNode )
+            // InternalNetworkModelTest.g:2005:1: ( ( ruleNode ) )
+            // InternalNetworkModelTest.g:2006:2: ( ruleNode )
             {
-            // InternalNetworkModelTest.g:1925:2: ( ruleNode )
-            // InternalNetworkModelTest.g:1926:3: ruleNode
+            // InternalNetworkModelTest.g:2006:2: ( ruleNode )
+            // InternalNetworkModelTest.g:2007:3: ruleNode
             {
              before(grammarAccess.getConfigAccess().getNodeNodeParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -5823,17 +6060,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Config__BindingAssignment_5"
-    // InternalNetworkModelTest.g:1935:1: rule__Config__BindingAssignment_5 : ( ruleBinding ) ;
+    // InternalNetworkModelTest.g:2016:1: rule__Config__BindingAssignment_5 : ( ruleBinding ) ;
     public final void rule__Config__BindingAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1939:1: ( ( ruleBinding ) )
-            // InternalNetworkModelTest.g:1940:2: ( ruleBinding )
+            // InternalNetworkModelTest.g:2020:1: ( ( ruleBinding ) )
+            // InternalNetworkModelTest.g:2021:2: ( ruleBinding )
             {
-            // InternalNetworkModelTest.g:1940:2: ( ruleBinding )
-            // InternalNetworkModelTest.g:1941:3: ruleBinding
+            // InternalNetworkModelTest.g:2021:2: ( ruleBinding )
+            // InternalNetworkModelTest.g:2022:3: ruleBinding
             {
              before(grammarAccess.getConfigAccess().getBindingBindingParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -5864,17 +6101,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Node__NodetypeAssignment_0"
-    // InternalNetworkModelTest.g:1950:1: rule__Node__NodetypeAssignment_0 : ( ruleNodeType ) ;
+    // InternalNetworkModelTest.g:2031:1: rule__Node__NodetypeAssignment_0 : ( ruleNodeType ) ;
     public final void rule__Node__NodetypeAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1954:1: ( ( ruleNodeType ) )
-            // InternalNetworkModelTest.g:1955:2: ( ruleNodeType )
+            // InternalNetworkModelTest.g:2035:1: ( ( ruleNodeType ) )
+            // InternalNetworkModelTest.g:2036:2: ( ruleNodeType )
             {
-            // InternalNetworkModelTest.g:1955:2: ( ruleNodeType )
-            // InternalNetworkModelTest.g:1956:3: ruleNodeType
+            // InternalNetworkModelTest.g:2036:2: ( ruleNodeType )
+            // InternalNetworkModelTest.g:2037:3: ruleNodeType
             {
              before(grammarAccess.getNodeAccess().getNodetypeNodeTypeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -5904,22 +6141,22 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
     // $ANTLR end "rule__Node__NodetypeAssignment_0"
 
 
-    // $ANTLR start "rule__Node__NodeAssignment_1"
-    // InternalNetworkModelTest.g:1965:1: rule__Node__NodeAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Node__NodeAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Node__NameAssignment_1"
+    // InternalNetworkModelTest.g:2046:1: rule__Node__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Node__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1969:1: ( ( RULE_ID ) )
-            // InternalNetworkModelTest.g:1970:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2050:1: ( ( RULE_ID ) )
+            // InternalNetworkModelTest.g:2051:2: ( RULE_ID )
             {
-            // InternalNetworkModelTest.g:1970:2: ( RULE_ID )
-            // InternalNetworkModelTest.g:1971:3: RULE_ID
+            // InternalNetworkModelTest.g:2051:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2052:3: RULE_ID
             {
-             before(grammarAccess.getNodeAccess().getNodeIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getNodeAccess().getNodeIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getNodeAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -5938,21 +6175,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "rule__Node__NodeAssignment_1"
+    // $ANTLR end "rule__Node__NameAssignment_1"
 
 
     // $ANTLR start "rule__Node__ImageAssignment_3_1"
-    // InternalNetworkModelTest.g:1980:1: rule__Node__ImageAssignment_3_1 : ( RULE_STRING ) ;
+    // InternalNetworkModelTest.g:2061:1: rule__Node__ImageAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__Node__ImageAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1984:1: ( ( RULE_STRING ) )
-            // InternalNetworkModelTest.g:1985:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2065:1: ( ( RULE_STRING ) )
+            // InternalNetworkModelTest.g:2066:2: ( RULE_STRING )
             {
-            // InternalNetworkModelTest.g:1985:2: ( RULE_STRING )
-            // InternalNetworkModelTest.g:1986:3: RULE_STRING
+            // InternalNetworkModelTest.g:2066:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2067:3: RULE_STRING
             {
              before(grammarAccess.getNodeAccess().getImageSTRINGTerminalRuleCall_3_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -5979,17 +6216,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Node__NodeNameAssignment_5"
-    // InternalNetworkModelTest.g:1995:1: rule__Node__NodeNameAssignment_5 : ( RULE_STRING ) ;
+    // InternalNetworkModelTest.g:2076:1: rule__Node__NodeNameAssignment_5 : ( RULE_STRING ) ;
     public final void rule__Node__NodeNameAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:1999:1: ( ( RULE_STRING ) )
-            // InternalNetworkModelTest.g:2000:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2080:1: ( ( RULE_STRING ) )
+            // InternalNetworkModelTest.g:2081:2: ( RULE_STRING )
             {
-            // InternalNetworkModelTest.g:2000:2: ( RULE_STRING )
-            // InternalNetworkModelTest.g:2001:3: RULE_STRING
+            // InternalNetworkModelTest.g:2081:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2082:3: RULE_STRING
             {
              before(grammarAccess.getNodeAccess().getNodeNameSTRINGTerminalRuleCall_5_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -6016,17 +6253,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Node__NodeIDAssignment_7"
-    // InternalNetworkModelTest.g:2010:1: rule__Node__NodeIDAssignment_7 : ( RULE_STRING ) ;
+    // InternalNetworkModelTest.g:2091:1: rule__Node__NodeIDAssignment_7 : ( RULE_STRING ) ;
     public final void rule__Node__NodeIDAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2014:1: ( ( RULE_STRING ) )
-            // InternalNetworkModelTest.g:2015:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2095:1: ( ( RULE_STRING ) )
+            // InternalNetworkModelTest.g:2096:2: ( RULE_STRING )
             {
-            // InternalNetworkModelTest.g:2015:2: ( RULE_STRING )
-            // InternalNetworkModelTest.g:2016:3: RULE_STRING
+            // InternalNetworkModelTest.g:2096:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2097:3: RULE_STRING
             {
              before(grammarAccess.getNodeAccess().getNodeIDSTRINGTerminalRuleCall_7_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -6053,17 +6290,17 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Node__NodeIPAssignment_8_1"
-    // InternalNetworkModelTest.g:2025:1: rule__Node__NodeIPAssignment_8_1 : ( RULE_STRING ) ;
+    // InternalNetworkModelTest.g:2106:1: rule__Node__NodeIPAssignment_8_1 : ( RULE_STRING ) ;
     public final void rule__Node__NodeIPAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2029:1: ( ( RULE_STRING ) )
-            // InternalNetworkModelTest.g:2030:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2110:1: ( ( RULE_STRING ) )
+            // InternalNetworkModelTest.g:2111:2: ( RULE_STRING )
             {
-            // InternalNetworkModelTest.g:2030:2: ( RULE_STRING )
-            // InternalNetworkModelTest.g:2031:3: RULE_STRING
+            // InternalNetworkModelTest.g:2111:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2112:3: RULE_STRING
             {
              before(grammarAccess.getNodeAccess().getNodeIPSTRINGTerminalRuleCall_8_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -6090,21 +6327,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__NodeType__NodetypeAssignment"
-    // InternalNetworkModelTest.g:2040:1: rule__NodeType__NodetypeAssignment : ( ( rule__NodeType__NodetypeAlternatives_0 ) ) ;
+    // InternalNetworkModelTest.g:2121:1: rule__NodeType__NodetypeAssignment : ( ( rule__NodeType__NodetypeAlternatives_0 ) ) ;
     public final void rule__NodeType__NodetypeAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2044:1: ( ( ( rule__NodeType__NodetypeAlternatives_0 ) ) )
-            // InternalNetworkModelTest.g:2045:2: ( ( rule__NodeType__NodetypeAlternatives_0 ) )
+            // InternalNetworkModelTest.g:2125:1: ( ( ( rule__NodeType__NodetypeAlternatives_0 ) ) )
+            // InternalNetworkModelTest.g:2126:2: ( ( rule__NodeType__NodetypeAlternatives_0 ) )
             {
-            // InternalNetworkModelTest.g:2045:2: ( ( rule__NodeType__NodetypeAlternatives_0 ) )
-            // InternalNetworkModelTest.g:2046:3: ( rule__NodeType__NodetypeAlternatives_0 )
+            // InternalNetworkModelTest.g:2126:2: ( ( rule__NodeType__NodetypeAlternatives_0 ) )
+            // InternalNetworkModelTest.g:2127:3: ( rule__NodeType__NodetypeAlternatives_0 )
             {
              before(grammarAccess.getNodeTypeAccess().getNodetypeAlternatives_0()); 
-            // InternalNetworkModelTest.g:2047:3: ( rule__NodeType__NodetypeAlternatives_0 )
-            // InternalNetworkModelTest.g:2047:4: rule__NodeType__NodetypeAlternatives_0
+            // InternalNetworkModelTest.g:2128:3: ( rule__NodeType__NodetypeAlternatives_0 )
+            // InternalNetworkModelTest.g:2128:4: rule__NodeType__NodetypeAlternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__NodeType__NodetypeAlternatives_0();
@@ -6137,21 +6374,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Binding__NodeAAssignment_1"
-    // InternalNetworkModelTest.g:2055:1: rule__Binding__NodeAAssignment_1 : ( rulenodeA ) ;
+    // InternalNetworkModelTest.g:2136:1: rule__Binding__NodeAAssignment_1 : ( ruleNodeA ) ;
     public final void rule__Binding__NodeAAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2059:1: ( ( rulenodeA ) )
-            // InternalNetworkModelTest.g:2060:2: ( rulenodeA )
+            // InternalNetworkModelTest.g:2140:1: ( ( ruleNodeA ) )
+            // InternalNetworkModelTest.g:2141:2: ( ruleNodeA )
             {
-            // InternalNetworkModelTest.g:2060:2: ( rulenodeA )
-            // InternalNetworkModelTest.g:2061:3: rulenodeA
+            // InternalNetworkModelTest.g:2141:2: ( ruleNodeA )
+            // InternalNetworkModelTest.g:2142:3: ruleNodeA
             {
              before(grammarAccess.getBindingAccess().getNodeANodeAParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
-            rulenodeA();
+            ruleNodeA();
 
             state._fsp--;
 
@@ -6178,21 +6415,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Binding__NodeBAssignment_3"
-    // InternalNetworkModelTest.g:2070:1: rule__Binding__NodeBAssignment_3 : ( rulenodeB ) ;
+    // InternalNetworkModelTest.g:2151:1: rule__Binding__NodeBAssignment_3 : ( ruleNodeB ) ;
     public final void rule__Binding__NodeBAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2074:1: ( ( rulenodeB ) )
-            // InternalNetworkModelTest.g:2075:2: ( rulenodeB )
+            // InternalNetworkModelTest.g:2155:1: ( ( ruleNodeB ) )
+            // InternalNetworkModelTest.g:2156:2: ( ruleNodeB )
             {
-            // InternalNetworkModelTest.g:2075:2: ( rulenodeB )
-            // InternalNetworkModelTest.g:2076:3: rulenodeB
+            // InternalNetworkModelTest.g:2156:2: ( ruleNodeB )
+            // InternalNetworkModelTest.g:2157:3: ruleNodeB
             {
              before(grammarAccess.getBindingAccess().getNodeBNodeBParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
-            rulenodeB();
+            ruleNodeB();
 
             state._fsp--;
 
@@ -6218,22 +6455,22 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
     // $ANTLR end "rule__Binding__NodeBAssignment_3"
 
 
-    // $ANTLR start "rule__NodeA__NodeAssignment_0"
-    // InternalNetworkModelTest.g:2085:1: rule__NodeA__NodeAssignment_0 : ( RULE_ID ) ;
-    public final void rule__NodeA__NodeAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__Binding__LinkIDAssignment_6"
+    // InternalNetworkModelTest.g:2166:1: rule__Binding__LinkIDAssignment_6 : ( RULE_STRING ) ;
+    public final void rule__Binding__LinkIDAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2089:1: ( ( RULE_ID ) )
-            // InternalNetworkModelTest.g:2090:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2170:1: ( ( RULE_STRING ) )
+            // InternalNetworkModelTest.g:2171:2: ( RULE_STRING )
             {
-            // InternalNetworkModelTest.g:2090:2: ( RULE_ID )
-            // InternalNetworkModelTest.g:2091:3: RULE_ID
+            // InternalNetworkModelTest.g:2171:2: ( RULE_STRING )
+            // InternalNetworkModelTest.g:2172:3: RULE_STRING
             {
-             before(grammarAccess.getNodeAAccess().getNodeIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getNodeAAccess().getNodeIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getBindingAccess().getLinkIDSTRINGTerminalRuleCall_6_0()); 
+            match(input,RULE_STRING,FOLLOW_2); 
+             after(grammarAccess.getBindingAccess().getLinkIDSTRINGTerminalRuleCall_6_0()); 
 
             }
 
@@ -6252,21 +6489,58 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "rule__NodeA__NodeAssignment_0"
+    // $ANTLR end "rule__Binding__LinkIDAssignment_6"
+
+
+    // $ANTLR start "rule__NodeA__NameAssignment_0"
+    // InternalNetworkModelTest.g:2181:1: rule__NodeA__NameAssignment_0 : ( RULE_ID ) ;
+    public final void rule__NodeA__NameAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalNetworkModelTest.g:2185:1: ( ( RULE_ID ) )
+            // InternalNetworkModelTest.g:2186:2: ( RULE_ID )
+            {
+            // InternalNetworkModelTest.g:2186:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2187:3: RULE_ID
+            {
+             before(grammarAccess.getNodeAAccess().getNameIDTerminalRuleCall_0_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getNodeAAccess().getNameIDTerminalRuleCall_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__NodeA__NameAssignment_0"
 
 
     // $ANTLR start "rule__NodeA__EthAssignment_2"
-    // InternalNetworkModelTest.g:2100:1: rule__NodeA__EthAssignment_2 : ( RULE_ID ) ;
+    // InternalNetworkModelTest.g:2196:1: rule__NodeA__EthAssignment_2 : ( RULE_ID ) ;
     public final void rule__NodeA__EthAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2104:1: ( ( RULE_ID ) )
-            // InternalNetworkModelTest.g:2105:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2200:1: ( ( RULE_ID ) )
+            // InternalNetworkModelTest.g:2201:2: ( RULE_ID )
             {
-            // InternalNetworkModelTest.g:2105:2: ( RULE_ID )
-            // InternalNetworkModelTest.g:2106:3: RULE_ID
+            // InternalNetworkModelTest.g:2201:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2202:3: RULE_ID
             {
              before(grammarAccess.getNodeAAccess().getEthIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -6292,22 +6566,22 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
     // $ANTLR end "rule__NodeA__EthAssignment_2"
 
 
-    // $ANTLR start "rule__NodeB__NodeAssignment_0"
-    // InternalNetworkModelTest.g:2115:1: rule__NodeB__NodeAssignment_0 : ( RULE_ID ) ;
-    public final void rule__NodeB__NodeAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__NodeB__NameAssignment_0"
+    // InternalNetworkModelTest.g:2211:1: rule__NodeB__NameAssignment_0 : ( RULE_ID ) ;
+    public final void rule__NodeB__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2119:1: ( ( RULE_ID ) )
-            // InternalNetworkModelTest.g:2120:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2215:1: ( ( RULE_ID ) )
+            // InternalNetworkModelTest.g:2216:2: ( RULE_ID )
             {
-            // InternalNetworkModelTest.g:2120:2: ( RULE_ID )
-            // InternalNetworkModelTest.g:2121:3: RULE_ID
+            // InternalNetworkModelTest.g:2216:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2217:3: RULE_ID
             {
-             before(grammarAccess.getNodeBAccess().getNodeIDTerminalRuleCall_0_0()); 
+             before(grammarAccess.getNodeBAccess().getNameIDTerminalRuleCall_0_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getNodeBAccess().getNodeIDTerminalRuleCall_0_0()); 
+             after(grammarAccess.getNodeBAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
 
@@ -6326,21 +6600,21 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
         }
         return ;
     }
-    // $ANTLR end "rule__NodeB__NodeAssignment_0"
+    // $ANTLR end "rule__NodeB__NameAssignment_0"
 
 
     // $ANTLR start "rule__NodeB__EthAssignment_2"
-    // InternalNetworkModelTest.g:2130:1: rule__NodeB__EthAssignment_2 : ( RULE_ID ) ;
+    // InternalNetworkModelTest.g:2226:1: rule__NodeB__EthAssignment_2 : ( RULE_ID ) ;
     public final void rule__NodeB__EthAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalNetworkModelTest.g:2134:1: ( ( RULE_ID ) )
-            // InternalNetworkModelTest.g:2135:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2230:1: ( ( RULE_ID ) )
+            // InternalNetworkModelTest.g:2231:2: ( RULE_ID )
             {
-            // InternalNetworkModelTest.g:2135:2: ( RULE_ID )
-            // InternalNetworkModelTest.g:2136:3: RULE_ID
+            // InternalNetworkModelTest.g:2231:2: ( RULE_ID )
+            // InternalNetworkModelTest.g:2232:3: RULE_ID
             {
              before(grammarAccess.getNodeBAccess().getEthIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -6390,5 +6664,7 @@ public class InternalNetworkModelTestParser extends AbstractInternalContentAssis
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000010000000L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000040100000L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000400000000L});
 
 }

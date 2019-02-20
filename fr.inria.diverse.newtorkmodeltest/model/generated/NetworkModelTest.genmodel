@@ -28,7 +28,7 @@
     </genClasses>
     <genClasses ecoreClass="NetworkModelTest.ecore#//Node">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NetworkModelTest.ecore#//Node/nodetype"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//Node/node"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//Node/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//Node/image"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//Node/nodeName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//Node/nodeID"/>
@@ -40,14 +40,18 @@
     <genClasses ecoreClass="NetworkModelTest.ecore#//Binding">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NetworkModelTest.ecore#//Binding/nodeA"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NetworkModelTest.ecore#//Binding/nodeB"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//Binding/linkID"/>
     </genClasses>
-    <genClasses ecoreClass="NetworkModelTest.ecore#//nodeA">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//nodeA/node"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//nodeA/eth"/>
+    <genClasses ecoreClass="NetworkModelTest.ecore#//LinkID">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//LinkID/linkID"/>
     </genClasses>
-    <genClasses ecoreClass="NetworkModelTest.ecore#//nodeB">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//nodeB/node"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//nodeB/eth"/>
+    <genClasses ecoreClass="NetworkModelTest.ecore#//NodeA">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//NodeA/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//NodeA/eth"/>
+    </genClasses>
+    <genClasses ecoreClass="NetworkModelTest.ecore#//NodeB">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//NodeB/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NetworkModelTest.ecore#//NodeB/eth"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

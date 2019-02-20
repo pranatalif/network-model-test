@@ -7,6 +7,7 @@
 'NAT'=16
 'OVS'=12
 'UbuntuDesktop'=15
+'and'=32
 'bind'=31
 'config'=25
 'datatype'=24
@@ -14,10 +15,11 @@
 'extends'=26
 'image:'=29
 'import'=22
+'linkID:'=34
 'name:'=27
 'nodeID:'=28
 'package'=18
-'with'=32
+'with'=33
 '{'=19
 '}'=20
 RULE_ANY_OTHER=10
@@ -49,3 +51,5 @@ T__29=29
 T__30=30
 T__31=31
 T__32=32
+T__33=33
+T__34=34

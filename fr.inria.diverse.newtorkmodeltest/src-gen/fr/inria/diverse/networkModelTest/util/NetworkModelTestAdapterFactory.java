@@ -126,14 +126,19 @@ public class NetworkModelTestAdapterFactory extends AdapterFactoryImpl
         return createBindingAdapter();
       }
       @Override
-      public Adapter casenodeA(nodeA object)
+      public Adapter caseLinkID(LinkID object)
       {
-        return createnodeAAdapter();
+        return createLinkIDAdapter();
       }
       @Override
-      public Adapter casenodeB(nodeB object)
+      public Adapter caseNodeA(NodeA object)
       {
-        return createnodeBAdapter();
+        return createNodeAAdapter();
+      }
+      @Override
+      public Adapter caseNodeB(NodeB object)
+      {
+        return createNodeBAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -308,31 +313,46 @@ public class NetworkModelTestAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link fr.inria.diverse.networkModelTest.nodeA <em>node A</em>}'.
+   * Creates a new adapter for an object of class '{@link fr.inria.diverse.networkModelTest.LinkID <em>Link ID</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see fr.inria.diverse.networkModelTest.nodeA
+   * @see fr.inria.diverse.networkModelTest.LinkID
    * @generated
    */
-  public Adapter createnodeAAdapter()
+  public Adapter createLinkIDAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link fr.inria.diverse.networkModelTest.nodeB <em>node B</em>}'.
+   * Creates a new adapter for an object of class '{@link fr.inria.diverse.networkModelTest.NodeA <em>Node A</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see fr.inria.diverse.networkModelTest.nodeB
+   * @see fr.inria.diverse.networkModelTest.NodeA
    * @generated
    */
-  public Adapter createnodeBAdapter()
+  public Adapter createNodeAAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.inria.diverse.networkModelTest.NodeB <em>Node B</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.inria.diverse.networkModelTest.NodeB
+   * @generated
+   */
+  public Adapter createNodeBAdapter()
   {
     return null;
   }

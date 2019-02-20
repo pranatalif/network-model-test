@@ -58,7 +58,7 @@ public class NetworkModelTestParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConfigAccess().getNodeAssignment_4(), "rule__Config__NodeAssignment_4");
 			builder.put(grammarAccess.getConfigAccess().getBindingAssignment_5(), "rule__Config__BindingAssignment_5");
 			builder.put(grammarAccess.getNodeAccess().getNodetypeAssignment_0(), "rule__Node__NodetypeAssignment_0");
-			builder.put(grammarAccess.getNodeAccess().getNodeAssignment_1(), "rule__Node__NodeAssignment_1");
+			builder.put(grammarAccess.getNodeAccess().getNameAssignment_1(), "rule__Node__NameAssignment_1");
 			builder.put(grammarAccess.getNodeAccess().getImageAssignment_3_1(), "rule__Node__ImageAssignment_3_1");
 			builder.put(grammarAccess.getNodeAccess().getNodeNameAssignment_5(), "rule__Node__NodeNameAssignment_5");
 			builder.put(grammarAccess.getNodeAccess().getNodeIDAssignment_7(), "rule__Node__NodeIDAssignment_7");
@@ -66,9 +66,11 @@ public class NetworkModelTestParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getNodeTypeAccess().getNodetypeAssignment(), "rule__NodeType__NodetypeAssignment");
 			builder.put(grammarAccess.getBindingAccess().getNodeAAssignment_1(), "rule__Binding__NodeAAssignment_1");
 			builder.put(grammarAccess.getBindingAccess().getNodeBAssignment_3(), "rule__Binding__NodeBAssignment_3");
-			builder.put(grammarAccess.getNodeAAccess().getNodeAssignment_0(), "rule__NodeA__NodeAssignment_0");
+			builder.put(grammarAccess.getBindingAccess().getLinkIDAssignment_6(), "rule__Binding__LinkIDAssignment_6");
+			builder.put(grammarAccess.getLinkIDAccess().getLinkIDAssignment(), "rule__LinkID__LinkIDAssignment");
+			builder.put(grammarAccess.getNodeAAccess().getNameAssignment_0(), "rule__NodeA__NameAssignment_0");
 			builder.put(grammarAccess.getNodeAAccess().getEthAssignment_2(), "rule__NodeA__EthAssignment_2");
-			builder.put(grammarAccess.getNodeBAccess().getNodeAssignment_0(), "rule__NodeB__NodeAssignment_0");
+			builder.put(grammarAccess.getNodeBAccess().getNameAssignment_0(), "rule__NodeB__NameAssignment_0");
 			builder.put(grammarAccess.getNodeBAccess().getEthAssignment_2(), "rule__NodeB__EthAssignment_2");
 		}
 	}

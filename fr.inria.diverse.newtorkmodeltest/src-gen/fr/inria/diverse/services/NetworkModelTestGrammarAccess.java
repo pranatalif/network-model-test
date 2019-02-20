@@ -288,8 +288,8 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNodetypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cNodetypeNodeTypeParserRuleCall_0_0 = (RuleCall)cNodetypeAssignment_0.eContents().get(0);
-		private final Assignment cNodeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNodeIDTerminalRuleCall_1_0 = (RuleCall)cNodeAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cImageKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
@@ -308,13 +308,13 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Node:
-		//	nodetype=NodeType node=ID '{' ('image:' image=STRING)?
+		//	nodetype=NodeType name=ID '{' ('image:' image=STRING)?
 		//	'name:' nodeName=STRING
 		//	'nodeID:' nodeID=STRING ('eth0.IP:' nodeIP=STRING)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//nodetype=NodeType node=ID '{' ('image:' image=STRING)? 'name:' nodeName=STRING 'nodeID:' nodeID=STRING ('eth0.IP:'
+		//nodetype=NodeType name=ID '{' ('image:' image=STRING)? 'name:' nodeName=STRING 'nodeID:' nodeID=STRING ('eth0.IP:'
 		//nodeIP=STRING)? '}'
 		public Group getGroup() { return cGroup; }
 		
@@ -324,11 +324,11 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		//NodeType
 		public RuleCall getNodetypeNodeTypeParserRuleCall_0_0() { return cNodetypeNodeTypeParserRuleCall_0_0; }
 		
-		//node=ID
-		public Assignment getNodeAssignment_1() { return cNodeAssignment_1; }
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
 		//ID
-		public RuleCall getNodeIDTerminalRuleCall_1_0() { return cNodeIDTerminalRuleCall_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -427,56 +427,87 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		private final Keyword cBindKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNodeAAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNodeANodeAParserRuleCall_1_0 = (RuleCall)cNodeAAssignment_1.eContents().get(0);
-		private final Keyword cWithKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cAndKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNodeBAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNodeBNodeBParserRuleCall_3_0 = (RuleCall)cNodeBAssignment_3.eContents().get(0);
+		private final Keyword cWithKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cLinkIDKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cLinkIDAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cLinkIDSTRINGTerminalRuleCall_6_0 = (RuleCall)cLinkIDAssignment_6.eContents().get(0);
 		
 		//Binding:
-		//	'bind' nodeA+=nodeA 'with' nodeB+=nodeB;
+		//	'bind' nodeA=NodeA 'and' nodeB=NodeB 'with' 'linkID:' linkID=STRING;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'bind' nodeA+=nodeA 'with' nodeB+=nodeB
+		//'bind' nodeA=NodeA 'and' nodeB=NodeB 'with' 'linkID:' linkID=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//'bind'
 		public Keyword getBindKeyword_0() { return cBindKeyword_0; }
 		
-		//nodeA+=nodeA
+		//nodeA=NodeA
 		public Assignment getNodeAAssignment_1() { return cNodeAAssignment_1; }
 		
-		//nodeA
+		//NodeA
 		public RuleCall getNodeANodeAParserRuleCall_1_0() { return cNodeANodeAParserRuleCall_1_0; }
 		
-		//'with'
-		public Keyword getWithKeyword_2() { return cWithKeyword_2; }
+		//'and'
+		public Keyword getAndKeyword_2() { return cAndKeyword_2; }
 		
-		//nodeB+=nodeB
+		//nodeB=NodeB
 		public Assignment getNodeBAssignment_3() { return cNodeBAssignment_3; }
 		
-		//nodeB
+		//NodeB
 		public RuleCall getNodeBNodeBParserRuleCall_3_0() { return cNodeBNodeBParserRuleCall_3_0; }
+		
+		//'with'
+		public Keyword getWithKeyword_4() { return cWithKeyword_4; }
+		
+		//'linkID:'
+		public Keyword getLinkIDKeyword_5() { return cLinkIDKeyword_5; }
+		
+		//linkID=STRING
+		public Assignment getLinkIDAssignment_6() { return cLinkIDAssignment_6; }
+		
+		//STRING
+		public RuleCall getLinkIDSTRINGTerminalRuleCall_6_0() { return cLinkIDSTRINGTerminalRuleCall_6_0; }
+	}
+	public class LinkIDElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.NetworkModelTest.LinkID");
+		private final Assignment cLinkIDAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cLinkIDSTRINGTerminalRuleCall_0 = (RuleCall)cLinkIDAssignment.eContents().get(0);
+		
+		//LinkID:
+		//	linkID=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//linkID=STRING
+		public Assignment getLinkIDAssignment() { return cLinkIDAssignment; }
+		
+		//STRING
+		public RuleCall getLinkIDSTRINGTerminalRuleCall_0() { return cLinkIDSTRINGTerminalRuleCall_0; }
 	}
 	public class NodeAElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.NetworkModelTest.nodeA");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.NetworkModelTest.NodeA");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNodeIDTerminalRuleCall_0_0 = (RuleCall)cNodeAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cEthAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cEthIDTerminalRuleCall_2_0 = (RuleCall)cEthAssignment_2.eContents().get(0);
 		
-		//nodeA:
-		//	node=ID '.' eth=ID;
+		//NodeA:
+		//	name=ID '.' eth=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//node=ID '.' eth=ID
+		//name=ID '.' eth=ID
 		public Group getGroup() { return cGroup; }
 		
-		//node=ID
-		public Assignment getNodeAssignment_0() { return cNodeAssignment_0; }
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 		
 		//ID
-		public RuleCall getNodeIDTerminalRuleCall_0_0() { return cNodeIDTerminalRuleCall_0_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 		
 		//'.'
 		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
@@ -488,26 +519,26 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		public RuleCall getEthIDTerminalRuleCall_2_0() { return cEthIDTerminalRuleCall_2_0; }
 	}
 	public class NodeBElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.NetworkModelTest.nodeB");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.diverse.NetworkModelTest.NodeB");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cNodeAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNodeIDTerminalRuleCall_0_0 = (RuleCall)cNodeAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cEthAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cEthIDTerminalRuleCall_2_0 = (RuleCall)cEthAssignment_2.eContents().get(0);
 		
-		//nodeB:
-		//	node=ID '.' eth=ID;
+		//NodeB:
+		//	name=ID '.' eth=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//node=ID '.' eth=ID
+		//name=ID '.' eth=ID
 		public Group getGroup() { return cGroup; }
 		
-		//node=ID
-		public Assignment getNodeAssignment_0() { return cNodeAssignment_0; }
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 		
 		//ID
-		public RuleCall getNodeIDTerminalRuleCall_0_0() { return cNodeIDTerminalRuleCall_0_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 		
 		//'.'
 		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
@@ -532,6 +563,7 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 	private final NodeElements pNode;
 	private final NodeTypeElements pNodeType;
 	private final BindingElements pBinding;
+	private final LinkIDElements pLinkID;
 	private final NodeAElements pNodeA;
 	private final NodeBElements pNodeB;
 	
@@ -556,6 +588,7 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		this.pNode = new NodeElements();
 		this.pNodeType = new NodeTypeElements();
 		this.pBinding = new BindingElements();
+		this.pLinkID = new LinkIDElements();
 		this.pNodeA = new NodeAElements();
 		this.pNodeB = new NodeBElements();
 	}
@@ -683,7 +716,7 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 	}
 	
 	//Node:
-	//	nodetype=NodeType node=ID '{' ('image:' image=STRING)?
+	//	nodetype=NodeType name=ID '{' ('image:' image=STRING)?
 	//	'name:' nodeName=STRING
 	//	'nodeID:' nodeID=STRING ('eth0.IP:' nodeIP=STRING)?
 	//	'}';
@@ -706,7 +739,7 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 	}
 	
 	//Binding:
-	//	'bind' nodeA+=nodeA 'with' nodeB+=nodeB;
+	//	'bind' nodeA=NodeA 'and' nodeB=NodeB 'with' 'linkID:' linkID=STRING;
 	public BindingElements getBindingAccess() {
 		return pBinding;
 	}
@@ -715,8 +748,18 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		return getBindingAccess().getRule();
 	}
 	
-	//nodeA:
-	//	node=ID '.' eth=ID;
+	//LinkID:
+	//	linkID=STRING;
+	public LinkIDElements getLinkIDAccess() {
+		return pLinkID;
+	}
+	
+	public ParserRule getLinkIDRule() {
+		return getLinkIDAccess().getRule();
+	}
+	
+	//NodeA:
+	//	name=ID '.' eth=ID;
 	public NodeAElements getNodeAAccess() {
 		return pNodeA;
 	}
@@ -725,8 +768,8 @@ public class NetworkModelTestGrammarAccess extends AbstractGrammarElementFinder 
 		return getNodeAAccess().getRule();
 	}
 	
-	//nodeB:
-	//	node=ID '.' eth=ID;
+	//NodeB:
+	//	name=ID '.' eth=ID;
 	public NodeBElements getNodeBAccess() {
 		return pNodeB;
 	}

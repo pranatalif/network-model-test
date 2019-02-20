@@ -44,7 +44,7 @@ Config:
 ;
 
 Node:
-	nodetype=NodeType node=ID '{'
+	nodetype=NodeType name=ID '{'
 		('image:' image=STRING)?
 		'name:' nodeName=STRING
 		'nodeID:' nodeID=STRING
@@ -57,13 +57,17 @@ NodeType:
 ;
 
 Binding:
-	'bind' nodeA+=nodeA 'with' nodeB+=nodeB
+	'bind' nodeA=NodeA 'and' nodeB=NodeB 'with' 'linkID:' linkID=STRING
 ;
 
-nodeA:
-	node=ID'.'eth=ID
+LinkID:
+	linkID=STRING
 ;
 
-nodeB:
-	node=ID'.'eth=ID
+NodeA:
+	name=ID'.'eth=ID
+;
+
+NodeB:
+	name=ID'.'eth=ID
 ;

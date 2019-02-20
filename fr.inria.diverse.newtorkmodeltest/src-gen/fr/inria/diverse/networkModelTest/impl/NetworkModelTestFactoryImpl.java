@@ -75,8 +75,9 @@ public class NetworkModelTestFactoryImpl extends EFactoryImpl implements Network
       case NetworkModelTestPackage.NODE: return createNode();
       case NetworkModelTestPackage.NODE_TYPE: return createNodeType();
       case NetworkModelTestPackage.BINDING: return createBinding();
-      case NetworkModelTestPackage.NODE_A: return createnodeA();
-      case NetworkModelTestPackage.NODE_B: return createnodeB();
+      case NetworkModelTestPackage.LINK_ID: return createLinkID();
+      case NetworkModelTestPackage.NODE_A: return createNodeA();
+      case NetworkModelTestPackage.NODE_B: return createNodeB();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -208,9 +209,21 @@ public class NetworkModelTestFactoryImpl extends EFactoryImpl implements Network
    * @generated
    */
   @Override
-  public nodeA createnodeA()
+  public LinkID createLinkID()
   {
-    nodeAImpl nodeA = new nodeAImpl();
+    LinkIDImpl linkID = new LinkIDImpl();
+    return linkID;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NodeA createNodeA()
+  {
+    NodeAImpl nodeA = new NodeAImpl();
     return nodeA;
   }
 
@@ -220,9 +233,9 @@ public class NetworkModelTestFactoryImpl extends EFactoryImpl implements Network
    * @generated
    */
   @Override
-  public nodeB createnodeB()
+  public NodeB createNodeB()
   {
-    nodeBImpl nodeB = new nodeBImpl();
+    NodeBImpl nodeB = new NodeBImpl();
     return nodeB;
   }
 

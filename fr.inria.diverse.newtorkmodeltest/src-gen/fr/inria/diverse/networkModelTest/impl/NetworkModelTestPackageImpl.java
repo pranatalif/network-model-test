@@ -7,16 +7,17 @@ import fr.inria.diverse.networkModelTest.Binding;
 import fr.inria.diverse.networkModelTest.Config;
 import fr.inria.diverse.networkModelTest.DataType;
 import fr.inria.diverse.networkModelTest.Import;
+import fr.inria.diverse.networkModelTest.LinkID;
 import fr.inria.diverse.networkModelTest.Model;
 import fr.inria.diverse.networkModelTest.NetworkModelTestFactory;
 import fr.inria.diverse.networkModelTest.NetworkModelTestPackage;
 import fr.inria.diverse.networkModelTest.Node;
+import fr.inria.diverse.networkModelTest.NodeA;
+import fr.inria.diverse.networkModelTest.NodeB;
 import fr.inria.diverse.networkModelTest.NodeElement;
 import fr.inria.diverse.networkModelTest.NodeType;
 import fr.inria.diverse.networkModelTest.PackageDeclaration;
 import fr.inria.diverse.networkModelTest.Type;
-import fr.inria.diverse.networkModelTest.nodeA;
-import fr.inria.diverse.networkModelTest.nodeB;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -102,6 +103,13 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   private EClass bindingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass linkIDEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -373,7 +381,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   @Override
-  public EAttribute getNode_Node()
+  public EAttribute getNode_Name()
   {
     return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
   }
@@ -483,7 +491,40 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   @Override
-  public EClass getnodeA()
+  public EAttribute getBinding_LinkID()
+  {
+    return (EAttribute)bindingEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getLinkID()
+  {
+    return linkIDEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLinkID_LinkID()
+  {
+    return (EAttribute)linkIDEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getNodeA()
   {
     return nodeAEClass;
   }
@@ -494,7 +535,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   @Override
-  public EAttribute getnodeA_Node()
+  public EAttribute getNodeA_Name()
   {
     return (EAttribute)nodeAEClass.getEStructuralFeatures().get(0);
   }
@@ -505,7 +546,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   @Override
-  public EAttribute getnodeA_Eth()
+  public EAttribute getNodeA_Eth()
   {
     return (EAttribute)nodeAEClass.getEStructuralFeatures().get(1);
   }
@@ -516,7 +557,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   @Override
-  public EClass getnodeB()
+  public EClass getNodeB()
   {
     return nodeBEClass;
   }
@@ -527,7 +568,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   @Override
-  public EAttribute getnodeB_Node()
+  public EAttribute getNodeB_Name()
   {
     return (EAttribute)nodeBEClass.getEStructuralFeatures().get(0);
   }
@@ -538,7 +579,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
    * @generated
    */
   @Override
-  public EAttribute getnodeB_Eth()
+  public EAttribute getNodeB_Eth()
   {
     return (EAttribute)nodeBEClass.getEStructuralFeatures().get(1);
   }
@@ -598,7 +639,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
 
     nodeEClass = createEClass(NODE);
     createEReference(nodeEClass, NODE__NODETYPE);
-    createEAttribute(nodeEClass, NODE__NODE);
+    createEAttribute(nodeEClass, NODE__NAME);
     createEAttribute(nodeEClass, NODE__IMAGE);
     createEAttribute(nodeEClass, NODE__NODE_NAME);
     createEAttribute(nodeEClass, NODE__NODE_ID);
@@ -610,13 +651,17 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
     bindingEClass = createEClass(BINDING);
     createEReference(bindingEClass, BINDING__NODE_A);
     createEReference(bindingEClass, BINDING__NODE_B);
+    createEAttribute(bindingEClass, BINDING__LINK_ID);
+
+    linkIDEClass = createEClass(LINK_ID);
+    createEAttribute(linkIDEClass, LINK_ID__LINK_ID);
 
     nodeAEClass = createEClass(NODE_A);
-    createEAttribute(nodeAEClass, NODE_A__NODE);
+    createEAttribute(nodeAEClass, NODE_A__NAME);
     createEAttribute(nodeAEClass, NODE_A__ETH);
 
     nodeBEClass = createEClass(NODE_B);
-    createEAttribute(nodeBEClass, NODE_B__NODE);
+    createEAttribute(nodeBEClass, NODE_B__NAME);
     createEAttribute(nodeBEClass, NODE_B__ETH);
   }
 
@@ -680,7 +725,7 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
 
     initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getNode_Nodetype(), this.getNodeType(), null, "nodetype", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNode_Node(), ecorePackage.getEString(), "node", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNode_Name(), ecorePackage.getEString(), "name", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNode_Image(), ecorePackage.getEString(), "image", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNode_NodeName(), ecorePackage.getEString(), "nodeName", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNode_NodeID(), ecorePackage.getEString(), "nodeID", null, 0, 1, Node.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -690,16 +735,20 @@ public class NetworkModelTestPackageImpl extends EPackageImpl implements Network
     initEAttribute(getNodeType_Nodetype(), ecorePackage.getEString(), "nodetype", null, 0, 1, NodeType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bindingEClass, Binding.class, "Binding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBinding_NodeA(), this.getnodeA(), null, "nodeA", null, 0, -1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBinding_NodeB(), this.getnodeB(), null, "nodeB", null, 0, -1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBinding_NodeA(), this.getNodeA(), null, "nodeA", null, 0, 1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBinding_NodeB(), this.getNodeB(), null, "nodeB", null, 0, 1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBinding_LinkID(), ecorePackage.getEString(), "linkID", null, 0, 1, Binding.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(nodeAEClass, nodeA.class, "nodeA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getnodeA_Node(), ecorePackage.getEString(), "node", null, 0, 1, nodeA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getnodeA_Eth(), ecorePackage.getEString(), "eth", null, 0, 1, nodeA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(linkIDEClass, LinkID.class, "LinkID", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getLinkID_LinkID(), ecorePackage.getEString(), "linkID", null, 0, 1, LinkID.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(nodeBEClass, nodeB.class, "nodeB", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getnodeB_Node(), ecorePackage.getEString(), "node", null, 0, 1, nodeB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getnodeB_Eth(), ecorePackage.getEString(), "eth", null, 0, 1, nodeB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(nodeAEClass, NodeA.class, "NodeA", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNodeA_Name(), ecorePackage.getEString(), "name", null, 0, 1, NodeA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNodeA_Eth(), ecorePackage.getEString(), "eth", null, 0, 1, NodeA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(nodeBEClass, NodeB.class, "NodeB", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNodeB_Name(), ecorePackage.getEString(), "name", null, 0, 1, NodeB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getNodeB_Eth(), ecorePackage.getEString(), "eth", null, 0, 1, NodeB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

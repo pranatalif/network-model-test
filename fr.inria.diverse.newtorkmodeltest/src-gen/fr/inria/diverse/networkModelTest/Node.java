@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fr.inria.diverse.networkModelTest.Node#getNodetype <em>Nodetype</em>}</li>
- *   <li>{@link fr.inria.diverse.networkModelTest.Node#getNode <em>Node</em>}</li>
+ *   <li>{@link fr.inria.diverse.networkModelTest.Node#getName <em>Name</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.Node#getImage <em>Image</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.Node#getNodeName <em>Node Name</em>}</li>
  *   <li>{@link fr.inria.diverse.networkModelTest.Node#getNodeID <em>Node ID</em>}</li>
@@ -55,30 +55,30 @@ public interface Node extends EObject
   void setNodetype(NodeType value);
 
   /**
-   * Returns the value of the '<em><b>Node</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Node</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Node</em>' attribute.
-   * @see #setNode(String)
-   * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getNode_Node()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see fr.inria.diverse.networkModelTest.NetworkModelTestPackage#getNode_Name()
    * @model
    * @generated
    */
-  String getNode();
+  String getName();
 
   /**
-   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Node#getNode <em>Node</em>}' attribute.
+   * Sets the value of the '{@link fr.inria.diverse.networkModelTest.Node#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Node</em>' attribute.
-   * @see #getNode()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setNode(String value);
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Image</b></em>' attribute.
